@@ -1,55 +1,241 @@
 {
   "channels": {
-    "grabfan": { "name": "Fanpage Grab Fan Tháng 9", "sub": "66K", "link": "https://www.facebook.com/grabfanthang9", "img": "assets/images/gft9.jpg" },
-    "thamthinh": { "name": "Fanpage Rap Fan Thám Thính", "sub": "22K", "link": "https://www.facebook.com/rapfanthamthinh", "img": "assets/images/rftt.jpg" },
-    "nnr": { "name": "Fanpage Người Nghe Rap", "sub": "1.3K", "link": "https://www.facebook.com/nguoingherap", "img": "assets/images/nnr.jpg" },
-    "group": { "name": "Cộng đồng Grab Việt Underground", "sub": "13K", "link": "https://www.facebook.com/groups/8276007849195211", "img": "assets/images/cdgvu.png" },
-    "tiktok": { "name": "TikTok Grab Fan Tháng 9", "sub": "1.8K", "link": "https://www.tiktok.com/@grabfanthang9", "img": "assets/images/gft9.jpg" }
+    "grabfan": {
+      "name": "Fanpage Grab Fan Tháng 9",
+      "sub": "70K",
+      "link": "https://www.facebook.com/grabfanthang9",
+      "img": "assets/images/gft9.jpg"
+    },
+    "thamthinh": {
+      "name": "Fanpage Rap Fan Thám Thính",
+      "sub": "24K",
+      "link": "https://www.facebook.com/rapfanthamthinh",
+      "img": "assets/images/rftt.jpg"
+    },
+    "nnr": {
+      "name": "Fanpage Người Nghe Rap",
+      "sub": "1.3K",
+      "link": "https://www.facebook.com/nguoingherap",
+      "img": "assets/images/nnr.jpg"
+    },
+    "group": {
+      "name": "Cộng đồng Grab Việt Underground",
+      "sub": "13K",
+      "link": "https://www.facebook.com/groups/8276007849195211",
+      "img": "assets/images/cdgvu.png"
+    },
+    "tiktok": {
+      "name": "TikTok Grab Fan Tháng 9",
+      "sub": "1.8K",
+      "link": "https://www.tiktok.com/@grabfanthang9",
+      "img": "assets/images/gft9.jpg"
+    }
   },
   "pricing": {
     "underground": [
-      { "code": "Gói 1A", "desc": "- 1 poster sản phẩm", "p1": "200k", "p2": "150k", "p3": "20k", "p4": "100k" },
-      { "code": "Gói 1B", "desc": "- 1 video highlight", "p1": "210k", "p2": "180k", "p3": "20k", "p4": "120k" },
-      { "code": "Gói 1C", "desc": "- Share link sản phẩm trực tiếp", "p1": "160k", "p2": "120k", "p3": "10k", "p4": "80k" },
-      { "code": "Gói 2", "desc": "- 1 poster sản phẩm<br>- 1 video highlight", "p1": "380k", "p2": "250k", "p3": "40k", "p4": "180k" },
-      { "code": "Gói 3", "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight", "p1": "450k", "p2": "300k", "p3": "60k", "p4": "250k" },
-      { "code": "Gói 4", "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>", "p1": "600k", "p2": "450k", "p3": "100k", "p4": "350k" },
-      { "code": "Gói 5", "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>", "p1": "800k", "p2": "650k", "p3": "100k", "p4": "500k" }
+      {
+        "code": "Gói 1A",
+        "desc": "- 1 poster sản phẩm",
+        "p1": "200k",
+        "p2": "150k",
+        "p3": "20k",
+        "p4": "100k"
+      },
+      {
+        "code": "Gói 1B",
+        "desc": "- 1 video highlight",
+        "p1": "210k",
+        "p2": "180k",
+        "p3": "20k",
+        "p4": "120k"
+      },
+      {
+        "code": "Gói 1C",
+        "desc": "- Share link sản phẩm trực tiếp",
+        "p1": "160k",
+        "p2": "120k",
+        "p3": "10k",
+        "p4": "80k"
+      },
+      {
+        "code": "Gói 2",
+        "desc": "- 1 poster sản phẩm<br>- 1 video highlight",
+        "p1": "380k",
+        "p2": "250k",
+        "p3": "40k",
+        "p4": "180k"
+      },
+      {
+        "code": "Gói 3",
+        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
+        "p1": "450k",
+        "p2": "300k",
+        "p3": "60k",
+        "p4": "250k"
+      },
+      {
+        "code": "Gói 4",
+        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
+        "p1": "600k",
+        "p2": "450k",
+        "p3": "100k",
+        "p4": "350k"
+      },
+      {
+        "code": "Gói 5",
+        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
+        "p1": "800k",
+        "p2": "650k",
+        "p3": "100k",
+        "p4": "500k"
+      }
     ],
     "showbiz": [
-      { "code": "Gói 1A", "desc": "- 1 poster sản phẩm", "p1": "300k", "p2": "200k", "p3": "30k", "p4": "100k" },
-      { "code": "Gói 1B", "desc": "- 1 video highlight", "p1": "320k", "p2": "220k", "p3": "40k", "p4": "120k" },
-      { "code": "Gói 1C", "desc": "- Share link sản phẩm trực tiếp", "p1": "260k", "p2": "180k", "p3": "20k", "p4": "80k" },
-      { "code": "Gói 2", "desc": "- 1 poster sản phẩm<br>- 1 video highlight", "p1": "380k", "p2": "350k", "p3": "50k", "p4": "180k" },
-      { "code": "Gói 3", "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight", "p1": "550k", "p2": "400k", "p3": "60k", "p4": "250k" },
-      { "code": "Gói 4", "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>", "p1": "700k", "p2": "550k", "p3": "100k", "p4": "350k" },
-      { "code": "Gói 5", "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>", "p1": "1.000k", "p2": "750k", "p3": "150k", "p4": "500k" }
+      {
+        "code": "Gói 1A",
+        "desc": "- 1 poster sản phẩm",
+        "p1": "300k",
+        "p2": "200k",
+        "p3": "30k",
+        "p4": "100k"
+      },
+      {
+        "code": "Gói 1B",
+        "desc": "- 1 video highlight",
+        "p1": "320k",
+        "p2": "220k",
+        "p3": "40k",
+        "p4": "120k"
+      },
+      {
+        "code": "Gói 1C",
+        "desc": "- Share link sản phẩm trực tiếp",
+        "p1": "260k",
+        "p2": "180k",
+        "p3": "20k",
+        "p4": "80k"
+      },
+      {
+        "code": "Gói 2",
+        "desc": "- 1 poster sản phẩm<br>- 1 video highlight",
+        "p1": "380k",
+        "p2": "350k",
+        "p3": "50k",
+        "p4": "180k"
+      },
+      {
+        "code": "Gói 3",
+        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
+        "p1": "550k",
+        "p2": "400k",
+        "p3": "60k",
+        "p4": "250k"
+      },
+      {
+        "code": "Gói 4",
+        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
+        "p1": "700k",
+        "p2": "550k",
+        "p3": "100k",
+        "p4": "350k"
+      },
+      {
+        "code": "Gói 5",
+        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
+        "p1": "1.000k",
+        "p2": "750k",
+        "p3": "150k",
+        "p4": "500k"
+      }
     ],
     "event": [
-      { "posts": "1 POST", "p1": "300k", "p2": "200k", "p3": "20k", "p4": "50k" },
-      { "posts": "2 POST", "p1": "550k", "p2": "350k", "p3": "40k", "p4": "80k" },
-      { "posts": "3 POST", "p1": "700k", "p2": "500k", "p3": "60k", "p4": "120k" }
+      {
+        "posts": "1 POST",
+        "p1": "300k",
+        "p2": "200k",
+        "p3": "20k",
+        "p4": "50k"
+      },
+      {
+        "posts": "2 POST",
+        "p1": "550k",
+        "p2": "350k",
+        "p3": "40k",
+        "p4": "80k"
+      },
+      {
+        "posts": "3 POST",
+        "p1": "700k",
+        "p2": "500k",
+        "p3": "60k",
+        "p4": "120k"
+      }
     ],
     "tiktok_price_ug": "50K / Video",
     "tiktok_price_showbiz": "100K / Video"
   },
   "clients": [
-    { "name": "24k.Right", "img": "https://photo-zmp3.zadn.vn/avatars/7/c/0/c/7c0c4e03b99400108f6aaaf09d5c17c5.jpg" },
-    { "name": "Karik", "img": "https://vcdn1-giaitri.vnecdn.net/2025/12/15/Rapper-Karik-tai-Anh-trai-say-hi-mua-thu-hai-42-1765776087.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=04ojIqJPo4-FxREX2RRXiw&view=origin" },
-    { "name": "Kimmese", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTf8LCNDUPga_RziHF8NlB1bQlB26TO3--mQ&s" },
-    { "name": "Low G", "img": "https://esquire.vn/wp-content/uploads/2025/10/LOWg-net-1024x1024.webp" },
-    { "name": "Freaky", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOo7ebJvOviDyiCUgIg1YPH_wABvdBhdf4Q&s" },
-    { "name": "Bạn Có Tài Mà", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlW-mUUNcxX-8OPG1-GhyPGT55imfcA56_Eg&s" },
-    { "name": "Grab", "img": "https://seaoffers.seabank.com.vn/uploaded/MCC/grab.png" },
-    { "name": "Dirty Coins", "img": "data:image/png;base64,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" },
-    { "name": "Sạp Show 5", "img": "https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-1/490876434_728345673090791_5850085119612938751_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFf5ouiR7Mto6ooDnITUe4ac_bpiUYhT_Vz9umJRiFP9bPoRX1nxBYkxYVJt9bGcjsSKcEW1_1rg7AFWc7sR2ms&_nc_ohc=ijbBZYLbkGoQ7kNvwHVYvYT&_nc_oc=Adm8xO4qbWvxF9-QEzYdhIFWl2jPHhVmilLvCs-gg-oQaGQGrH3oo_Fvh0VKZYh3tiI&_nc_zt=24&_nc_ht=scontent.fdad1-2.fna&_nc_gid=LX4GsxEuTRqheX2YfFfhTQ&oh=00_AfuSJV6ykuIbXHWeRWiWX8piGvFDpFsn4IwmesWFW00Tig&oe=69935F34" },
-    { "name": "Rocky CDE", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj0BHuTdXivbsKXVJI4aGK-i4lRGby0B5YPg&s" },
-    { "name": "Lee7", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_8_sYqAswXd-f6Qwx3PGN-OITOmIHEvX0PQ&s" },
-    { "name": "CCMK", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7g3HHvWm8dVspb4EkpXbasKzDXFvRPXWdVA&s" },
-    { "name": "ARIS NK", "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6AV3_7YC7rfXFBsb59B2jQTyh1Xrl8R9UKQ&s" },
-    { "name": "Double 2T", "img": "https://cdn2.tuoitre.vn/thumb_w/640/471584752817336320/2023/9/19/double-2t-1695114447945899899397.jpg"},
-    { "name": "yb. rookie", "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/605244022_122197759514548003_2422175043226167290_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGPVwY9TCBQ5-oEO-s6KqFkHFCbqyQWtWocUJurJBa1aptk84M3q7fA_X4gbHh807n_N4P9pA4NfUCUzuXScyWZ&_nc_ohc=ezDCumI2FeQQ7kNvwFMjV2C&_nc_oc=Adl99_z3LCRRAQ2RFRuYl-z8rCSfbevgdpJlWU6h6QoRfz4NQddrBHBpnqwH-MGsLO8&_nc_zt=23&_nc_ht=scontent.fdad1-3.fna&_nc_gid=VCITRz23OkmJna5JME5-eA&oh=00_AfvPiBd51o6IuxTiddXbfCfRl0Ve0u7STtsOYr4vGDdrow&oe=69981A38" }],
-    
+    {
+      "name": "24k.Right",
+      "img": "https://photo-zmp3.zadn.vn/avatars/7/c/0/c/7c0c4e03b99400108f6aaaf09d5c17c5.jpg"
+    },
+    {
+      "name": "Karik",
+      "img": "https://vcdn1-giaitri.vnecdn.net/2025/12/15/Rapper-Karik-tai-Anh-trai-say-hi-mua-thu-hai-42-1765776087.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=04ojIqJPo4-FxREX2RRXiw&view=origin"
+    },
+    {
+      "name": "Kimmese",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTf8LCNDUPga_RziHF8NlB1bQlB26TO3--mQ&s"
+    },
+    {
+      "name": "Low G",
+      "img": "https://esquire.vn/wp-content/uploads/2025/10/LOWg-net-1024x1024.webp"
+    },
+    {
+      "name": "Freaky",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOo7ebJvOviDyiCUgIg1YPH_wABvdBhdf4Q&s"
+    },
+    {
+      "name": "Bạn Có Tài Mà",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlW-mUUNcxX-8OPG1-GhyPGT55imfcA56_Eg&s"
+    },
+    {
+      "name": "Grab",
+      "img": "https://seaoffers.seabank.com.vn/uploaded/MCC/grab.png"
+    },
+    {
+      "name": "Dirty Coins",
+      "img": "data:image/png;base64,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"
+    },
+    {
+      "name": "Sạp Show 5",
+      "img": "https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-1/490876434_728345673090791_5850085119612938751_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFf5ouiR7Mto6ooDnITUe4ac_bpiUYhT_Vz9umJRiFP9bPoRX1nxBYkxYVJt9bGcjsSKcEW1_1rg7AFWc7sR2ms&_nc_ohc=ijbBZYLbkGoQ7kNvwHVYvYT&_nc_oc=Adm8xO4qbWvxF9-QEzYdhIFWl2jPHhVmilLvCs-gg-oQaGQGrH3oo_Fvh0VKZYh3tiI&_nc_zt=24&_nc_ht=scontent.fdad1-2.fna&_nc_gid=LX4GsxEuTRqheX2YfFfhTQ&oh=00_AfuSJV6ykuIbXHWeRWiWX8piGvFDpFsn4IwmesWFW00Tig&oe=69935F34"
+    },
+    {
+      "name": "Rocky CDE",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj0BHuTdXivbsKXVJI4aGK-i4lRGby0B5YPg&s"
+    },
+    {
+      "name": "Lee7",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_8_sYqAswXd-f6Qwx3PGN-OITOmIHEvX0PQ&s"
+    },
+    {
+      "name": "CCMK",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7g3HHvWm8dVspb4EkpXbasKzDXFvRPXWdVA&s"
+    },
+    {
+      "name": "ARIS NK",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6AV3_7YC7rfXFBsb59B2jQTyh1Xrl8R9UKQ&s"
+    },
+    {
+      "name": "Double 2T",
+      "img": "https://cdn2.tuoitre.vn/thumb_w/640/471584752817336320/2023/9/19/double-2t-1695114447945899899397.jpg"
+    },
+    {
+      "name": "yb. rookie",
+      "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-6/605244022_122197759514548003_2422175043226167290_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGPVwY9TCBQ5-oEO-s6KqFkHFCbqyQWtWocUJurJBa1aptk84M3q7fA_X4gbHh807n_N4P9pA4NfUCUzuXScyWZ&_nc_ohc=ezDCumI2FeQQ7kNvwFMjV2C&_nc_oc=Adl99_z3LCRRAQ2RFRuYl-z8rCSfbevgdpJlWU6h6QoRfz4NQddrBHBpnqwH-MGsLO8&_nc_zt=23&_nc_ht=scontent.fdad1-3.fna&_nc_gid=VCITRz23OkmJna5JME5-eA&oh=00_AfvPiBd51o6IuxTiddXbfCfRl0Ve0u7STtsOYr4vGDdrow&oe=69981A38"
+    }
+  ],
   "projects": [
     {
       "title": "Sạp Show 5",
