@@ -2,19 +2,19 @@
   "channels": {
     "grabfan": {
       "name": "Fanpage Grab Fan Tháng 9",
-      "sub": "92K",
+      "sub": "96K",
       "link": "https://www.facebook.com/grabfanthang9",
       "img": "assets/images/gft9.jpg"
     },
     "thamthinh": {
       "name": "Fanpage Rap Fan Thám Thính",
-      "sub": "28K",
+      "sub": "25K",
       "link": "https://www.facebook.com/rapfanthamthinh",
       "img": "assets/images/rftt.jpg"
     },
     "nnr": {
       "name": "Fanpage Người Nghe Rap",
-      "sub": "4.3K",
+      "sub": "1.3K",
       "link": "https://www.facebook.com/nguoingherap",
       "img": "assets/images/nnr.jpg"
     },
@@ -146,6 +146,29 @@
         "p2": "800k",
         "p3": "150k",
         "p4": "500k"
+      }
+    ],
+    "event": [
+      {
+        "posts": "1 POST",
+        "p1": "300k",
+        "p2": "200k",
+        "p3": "20k",
+        "p4": "50k"
+      },
+      {
+        "posts": "2 POST",
+        "p1": "550k",
+        "p2": "350k",
+        "p3": "40k",
+        "p4": "80k"
+      },
+      {
+        "posts": "3 POST",
+        "p1": "700k",
+        "p2": "500k",
+        "p3": "60k",
+        "p4": "120k"
       }
     ],
     "tiktok_price_ug": "50K / Video",
