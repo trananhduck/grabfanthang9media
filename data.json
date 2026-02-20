@@ -52,10 +52,10 @@
       {
         "code": "Gói 1C",
         "desc": "- Share link sản phẩm trực tiếp",
-        "p1": "160k",
-        "p2": "120k",
-        "p3": "10k",
-        "p4": "80k"
+        "p1": "200k",
+        "p2": "150k",
+        "p3": "20k",
+        "p4": "100k"
       },
       {
         "code": "Gói 2",
@@ -68,24 +68,24 @@
       {
         "code": "Gói 3",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
-        "p1": "450k",
-        "p2": "300k",
-        "p3": "60k",
+        "p1": "550k",
+        "p2": "400k",
+        "p3": "50k",
         "p4": "250k"
       },
       {
         "code": "Gói 4",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
-        "p1": "600k",
-        "p2": "450k",
+        "p1": "750k",
+        "p2": "550k",
         "p3": "100k",
         "p4": "350k"
       },
       {
         "code": "Gói 5",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
-        "p1": "800k",
-        "p2": "650k",
+        "p1": "900k",
+        "p2": "700k",
         "p3": "100k",
         "p4": "500k"
       }
@@ -110,15 +110,15 @@
       {
         "code": "Gói 1C",
         "desc": "- Share link sản phẩm trực tiếp",
-        "p1": "260k",
-        "p2": "180k",
-        "p3": "20k",
-        "p4": "80k"
+        "p1": "300k",
+        "p2": "200k",
+        "p3": "30k",
+        "p4": "100k"
       },
       {
         "code": "Gói 2",
         "desc": "- 1 poster sản phẩm<br>- 1 video highlight",
-        "p1": "380k",
+        "p1": "500k",
         "p2": "350k",
         "p3": "50k",
         "p4": "180k"
@@ -126,49 +126,26 @@
       {
         "code": "Gói 3",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
-        "p1": "550k",
-        "p2": "400k",
+        "p1": "700k",
+        "p2": "500k",
         "p3": "60k",
         "p4": "250k"
       },
       {
         "code": "Gói 4",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
-        "p1": "700k",
-        "p2": "550k",
+        "p1": "1000k",
+        "p2": "650k",
         "p3": "100k",
         "p4": "350k"
       },
       {
         "code": "Gói 5",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
-        "p1": "1.000k",
-        "p2": "750k",
+        "p1": "1300k",
+        "p2": "800k",
         "p3": "150k",
         "p4": "500k"
-      }
-    ],
-    "event": [
-      {
-        "posts": "1 POST",
-        "p1": "300k",
-        "p2": "200k",
-        "p3": "20k",
-        "p4": "50k"
-      },
-      {
-        "posts": "2 POST",
-        "p1": "550k",
-        "p2": "350k",
-        "p3": "40k",
-        "p4": "80k"
-      },
-      {
-        "posts": "3 POST",
-        "p1": "700k",
-        "p2": "500k",
-        "p3": "60k",
-        "p4": "120k"
       }
     ],
     "tiktok_price_ug": "50K / Video",
