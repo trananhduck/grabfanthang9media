@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiết kế Banner / Artwork</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      .demo-gallery img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .demo-gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Ẩn Modal Header & Footer để tối đa hóa diện tích ảnh */
+      #lightboxModal .modal-header,
+      #lightboxModal .modal-footer {
+        border: none;
+        padding: 0;
+        position: absolute;
+        z-index: 10;
+      }
+
+      #lightboxModal .modal-header {
+        top: 10px;
+        right: 15px;
+      }
+
+      #lightboxModal .btn-close {
+        background-color: white;
+        border-radius: 50%;
+        padding: 0.5rem;
+        opacity: 0.8;
+      }
+
+      #lightboxImage {
+        width: 100%;
+        height: auto;
+        max-height: 90vh; /* Giới hạn chiều cao để không bị cuộn dọc nhiều */
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dynamic-header"></div>
+
+    <section class="container my-5 py-4">
+      <a
+        href="../production.html"
+        class="text-decoration-none text-dark fw-bold mb-4 d-inline-block"
+      >
+        <i class="bi bi-arrow-left me-1"></i> QUAY LẠI DỊCH VỤ
+      </a>
+
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <span class="badge bg-dark text-warning mb-3 px-3 py-2 fs-6"
+            >Visual Design Services</span
+          >
+          <h1
+            class="display-5 fw-bold mb-4"
+            style="color: var(--schedio-blue-dark)"
+          >
+            THIẾT KẾ BANNER & ARTWORK
+          </h1>
+          <p
+            class="lead text-muted mb-4"
+            style="text-align: justify; text-justify: inter-word"
+          >
+            Một sản phẩm âm nhạc chất lượng không thể thiếu một "lớp áo" ấn
+            tượng. Tại Grab Fan Tháng 9 Media, chúng tôi hiểu rằng hình ảnh
+            (Visual) chính là điểm chạm đầu tiên để thu hút khán giả nhấn vào
+            tác phẩm của bạn.
+          </p>
+          <p
+            class="text-muted"
+            style="text-align: justify; text-justify: inter-word"
+          >
+            Đội ngũ Designer và Họa sĩ minh họa (Illustrator) của chúng tôi cung
+            cấp các giải pháp hình ảnh toàn diện. Từ những tấm poster quảng bá
+            sự kiện bắt mắt, cover art (ảnh bìa) độc đáo mang đậm màu sắc cá
+            nhân của nghệ sĩ, cho đến các artwork vẽ tay nghệ thuật phức tạp. Dù
+            phong cách bạn theo đuổi là Hiphop đường phố bụi bặm, Lofi chill nhẹ
+            nhàng, hay Cyberpunk viễn tưởng, chúng tôi đều có thể hiện thực hóa
+            ý tưởng của bạn thành những hình ảnh mãn nhãn nhất.
+          </p>
+        </div>
+      </div>
+
+      <hr class="my-5 opacity-25" />
+
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+          <h3 class="fw-bold" style="color: var(--schedio-blue-dark)">
+            SẢN PHẨM TIÊU BIỂU
+          </h3>
+          <p class="text-muted">Nhấn vào ảnh để xem chi tiết</p>
+        </div>
+
+        <div class="row g-4 demo-gallery">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/thegioimangdong.jpg"
+              alt="Demo Banner 1"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/net.jpg"
+              alt="Demo Banner 2"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/nangtamcuocchoi.jpg"
+              alt="Demo Banner 3"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/demo4.jpg"
+              alt="Demo Banner 4"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/robber.jpg"
+              alt="Demo Banner 5"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/doimatem.jpg"
+              alt="Demo Banner 6"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/caydibro.jpg"
+              alt="Demo Banner 7"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/laytien.jpg"
+              alt="Demo Banner 8"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5 opacity-25" />
+
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-10">
+          <h3
+            class="fw-bold text-center mb-4"
+            style="color: var(--schedio-blue-dark)"
+          >
+            BẢNG GIÁ CHI TIẾT
+          </h3>
+
+          <h4 class="fw-bold mt-4 mb-3 text-primary border-bottom pb-2">
+            1. Gói Banner, Artwork Thường
+          </h4>
+          <div class="table-responsive shadow-sm rounded-3 mb-4">
+            <table class="table table-hover table-bordered mb-0 align-middle">
+              <tbody>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="
+                      width: 25%;
+                      font-size: 1.1rem;
+                      color: var(--price-color);
+                    "
+                  >
+                    50.000đ
+                  </td>
+                  <td>Ghép chỉnh màu ảnh, thêm chữ cơ bản.</td>
+                </tr>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    120.000đ
+                  </td>
+                  <td>
+                    Ghép chỉnh màu ảnh nghệ thuật, thêm chữ đẹp (ví dụ: thêm tia
+                    lazer, khói, xích,... chữ phát sáng, chữ có sáng tối).
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    200.000đ
+                  </td>
+                  <td>
+                    Bao gồm các mục của 150k nhưng thêm art 3D (background, đồ
+                    vật như súng, vòng cổ).
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 class="fw-bold mt-5 mb-3 text-primary border-bottom pb-2">
+            2. Gói Banner, Artwork Vẽ
+          </h4>
+          <div class="table-responsive shadow-sm rounded-3 mb-4">
+            <table class="table table-hover table-bordered mb-0 align-middle">
+              <tbody>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="
+                      width: 25%;
+                      font-size: 1.1rem;
+                      color: var(--price-color);
+                    "
+                  >
+                    100.000đ
+                  </td>
+                  <td>
+                    Tùy yêu cầu, chỉ vẽ đồ vật, background,... không con người,
+                    con vật.
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    300.000đ
+                  </td>
+                  <td>Gồm gói 100k + có con người, con vật (tối đa 4).</td>
+                </tr>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    500.000đ
+                  </td>
+                  <td>
+                    Trên 4 con người/con vật, có hiệu ứng (phát sáng,
+                    nhiễu,...), ống kính mắt cá.
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="bg-light fw-bold text-center"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    700.000đ
+                  </td>
+                  <td>Gồm gói 500k + trên 7 con người/con vật, có art 3D.</td>
+                </tr>
+                <tr>
+                  <td
+                    class="bg-dark text-warning fw-bold text-center"
+                    style="font-size: 1.1rem"
+                  >
+                    1.000.000đ
+                  </td>
+                  <td class="fw-bold">Đáp ứng mọi yêu cầu trong khả năng.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card border-primary shadow-sm mt-5">
+            <div class="card-body p-4 text-center bg-light rounded-3">
+              <h4 class="fw-bold text-primary mb-3">
+                Gói thiết kế banner đặc biệt
+              </h4>
+
+              <p class="text-muted small mb-4">
+                Thiết kế Banner chuyên nghiệp đẳng cấp, mang đậm dấu ấn cá nhân.
+              </p>
+              <h2
+                class="display-5 fw-bold mb-0"
+                style="color: var(--price-color)"
+              >
+                500.000đ
+              </h2>
+            </div>
+          </div>
+
+          <div class="mt-5 text-center">
+            <a
+              href="https://zalo.me/0344377104"
+              target="_blank"
+              class="btn btn-gradient btn-lg rounded-pill px-5 shadow fw-bold"
+            >
+              <i class="bi bi-chat-text-fill me-2"></i> Nhắn Zalo tư vấn & đặt
+              lịch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0 text-center">
+            <img id="lightboxImage" src="" alt="Full Screen Demo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dynamic-footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+
+    <script>
+      function openLightbox(imageSrc) {
+        // Thay đổi src của ảnh trong modal
+        document.getElementById("lightboxImage").src = imageSrc;
+
+        // Lấy đối tượng modal của Bootstrap và hiển thị
+        var myModal = new bootstrap.Modal(
+          document.getElementById("lightboxModal"),
+        );
+        myModal.show();
+      }
+    </script>
+  </body>
+</html>

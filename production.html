@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dịch vụ production - Grab Fan Tháng 9 Media</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      /* ĐÃ XÓA HIỆU ỨNG HOVER THEO YÊU CẦU */
+      .prod-card {
+        border: 2px solid transparent;
+      }
+
+      .prod-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--schedio-yellow, #ffc107);
+        border-radius: 50%;
+        color: var(--schedio-dark, #212529);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* CSS riêng cho phần Banner Giới thiệu mới */
+      .production-hero {
+        background: linear-gradient(
+          135deg,
+          var(--schedio-blue-dark, #0f172a) 0%,
+          #1e293b 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .production-hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 193, 7, 0.08) 0%,
+          transparent 60%
+        );
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dynamic-header"></div>
+
+    <section class="production-hero py-5 text-white">
+      <div class="container py-5 position-relative z-1">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 text-center text-lg-start">
+            <span
+              class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold fs-6"
+            >
+              Hệ sinh thái toàn diện
+            </span>
+            <h1 class="display-4 fw-bold mb-4">
+              DỊCH VỤ <span class="text-warning">PRODUCTION</span>
+            </h1>
+            <p
+              class="lead opacity-90 mb-4"
+              style="text-align: justify; text-justify: inter-word"
+            >
+              Không chỉ dừng lại ở nền tảng truyền thông,
+              <strong class="text-white">Grab Fan Tháng 9 Media</strong> tự hào
+              cung cấp hệ sinh thái sản xuất trọn gói cho Rapper/Nghệ sĩ. Từ
+              những con beat độc quyền bắt tai, thiết kế artwork mang đậm dấu ấn
+              cá nhân, đến việc bấm máy dựng những MV mãn nhãn.
+            </p>
+            <p
+              class="text-light opacity-75 mb-5"
+              style="text-align: justify; text-justify: inter-word"
+            >
+              Với đội ngũ Producer, Designer và Editor chuyên nghiệp, am hiểu
+              sâu sắc văn hóa Rap/Hip-hop, chúng tôi tự tin đồng hành cùng bạn
+              biến mọi ý tưởng điên rồ nhất thành sản phẩm âm nhạc thực tế đẳng
+              cấp.
+            </p>
+            <a
+              href="#danh-sach-dich-vu"
+              class="btn btn-warning text-dark btn-lg fw-bold rounded-pill px-5 shadow-sm"
+            >
+              KHÁM PHÁ DỊCH VỤ <i class="bi bi-arrow-down ms-2"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="position-relative mt-4 mt-lg-0">
+              <div
+                class="position-absolute top-0 end-0 bg-warning rounded-4 opacity-75"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  transform: translate(15px, 15px);
+                "
+              ></div>
+
+              <img
+                src="https://dtrecords.vn/wp-content/uploads/2023/01/san-xuat-am-nhac-la-nghe-gi.jpg"
+                alt="Music Production Studio"
+                class="img-fluid rounded-4 shadow-lg position-relative z-1"
+                style="object-fit: cover; width: 100%; min-height: 350px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="danh-sach-dich-vu" class="container my-5 pt-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: var(--schedio-blue-dark)">
+          CÁC HẠNG MỤC SẢN XUẤT
+        </h2>
+        <p class="text-muted">
+          Chọn dịch vụ phù hợp để xem chi tiết bảng giá và demo
+        </p>
+      </div>
+      <div class="row g-4 justify-content-center" id="production-list"></div>
+    </section>
+
+    <div id="dynamic-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+    <script>
+      fetch("data.json")
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.getElementById("production-list");
+          data.production.forEach((item) => {
+            container.innerHTML += `
+                        <div class="col-md-6 col-lg-5">
+                            <div class="card prod-card h-100 p-4 rounded-4 bg-white shadow-sm">
+                                <div class="card-body text-center">
+                                    <div class="prod-icon-wrapper"><i class="bi ${item.icon}"></i></div>
+                                    <h4 class="fw-bold mb-3" style="color: var(--schedio-blue-dark);">${item.title}</h4>
+                                    <p class="text-muted small mb-4">${item.desc}</p>
+                                    <div class="bg-light p-3 rounded-3 mb-4">
+                                        <span class="d-block small text-muted mb-1">Khoảng giá ước tính:</span>
+                                        <span class="fs-5 fw-bold text-danger">${item.price_range}</span>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <a href="${item.detail_link}" class="btn btn-outline-dark fw-bold">Xem chi tiết & Demo</a>
+                                        <a href="https://zalo.me/0344377104" target="_blank" class="btn btn-warning text-dark fw-bold">Liên hệ báo giá/đặt hàng</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+          });
+        });
+    </script>
+  </body>
+</html>

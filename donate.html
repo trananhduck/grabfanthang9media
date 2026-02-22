@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donate - Ủng hộ Team</title>
+    <title>Donate - Ủng hộ team</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,51 +19,8 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
-      <div class="container">
-        <a class="navbar-brand fw-bold fs-3" href="index.html"
-          >GRAB FAN THÁNG 9</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="index.html">Trang chủ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="services.html">Bảng giá</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="clients.html"
-                >Khách hàng tiêu biểu</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="projects.html">Dự án nổi bật</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fw-bold" href="donate.html">Donate</a>
-            </li>
-          </ul>
-          <div class="ms-lg-3 mt-2 mt-lg-0">
-            <a
-              href="https://zalo.me/0344377104"
-              target="_blank"
-              class="btn btn-dark rounded-pill px-4 fw-bold"
-            >
-              <i class="bi bi-chat-dots-fill me-2"></i> Booking Ngay
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div id="dynamic-header"></div>
+
     <section class="container my-5 text-center">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -75,6 +32,7 @@
               src="./assets/images/qr.png"
               class="img-fluid mb-3 mx-auto"
               width="250"
+              alt="Mã QR Donate"
             />
             <h4 class="fw-bold">TRAN ANH DUC</h4>
             <p class="text-muted">Vietcombank: 1040314067</p>
@@ -83,63 +41,12 @@
         </div>
       </div>
     </section>
-    <footer class="schedio-footer pt-5 pb-3 mt-auto" id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5 mb-4">
-            <h5 class="fw-bold mb-3">GRAB FAN THÁNG 9 MEDIA.</h5>
-            <p class="small">
-              Đơn vị truyền thông chuyên biệt cho cộng đồng Rap/Hip-hop Việt
-              Nam.
-            </p>
-          </div>
-          <div class="col-md-7 mb-4">
-            <h6 class="fw-bold mb-3">LIÊN HỆ BOOKING</h6>
-            <div class="p-3 bg-white rounded-3 shadow-sm d-inline-block">
-              <ul class="list-unstyled mb-0 text-start">
-                <li class="mb-2">
-                  <a
-                    href="https://zalo.me/0344377104"
-                    target="_blank"
-                    class="text-decoration-none text-dark d-flex align-items-center"
-                  >
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
-                      width="20"
-                      height="20"
-                      class="me-2"
-                      alt="Zalo"
-                    />
-                    <span class="fw-bold">0344 377 104</span>
-                  </a>
-                </li>
-                <li class="mb-2">
-                  <i class="bi bi-facebook text-primary me-2"></i>
-                  <a
-                    href="https://www.facebook.com/grabfanthang9"
-                    target="_blank"
-                    class="text-decoration-none text-dark fw-bold"
-                    >Grab Fan Tháng 9</a
-                  >
-                </li>
-                <li class="mb-0 d-flex align-items-center">
-                  <i class="bi bi-envelope-fill text-danger me-2"></i>
-                  <a
-                    href="mailto:grft9.contact@gmail.com"
-                    class="text-decoration-none text-dark"
-                    >grft9.contact@gmail.com</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <hr />
-        <div class="text-center small">
-          &copy; 2026 Grab Fan Tháng 9 Media. Designed for V-Rap.
-        </div>
-      </div>
-    </footer>
+
+    <div id="dynamic-footer"></div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
   </body>
 </html>

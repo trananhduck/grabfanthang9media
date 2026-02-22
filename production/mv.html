@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit MV / VFX</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <style>
+      .demo-gallery img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .demo-gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      #lightboxModal .modal-header,
+      #lightboxModal .modal-footer {
+        border: none;
+        padding: 0;
+        position: absolute;
+        z-index: 10;
+      }
+      #lightboxModal .modal-header {
+        top: 10px;
+        right: 15px;
+      }
+      #lightboxModal .btn-close {
+        background-color: white;
+        border-radius: 50%;
+        padding: 0.5rem;
+        opacity: 0.8;
+      }
+      #lightboxImage {
+        width: 100%;
+        height: auto;
+        max-height: 90vh;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dynamic-header"></div>
+
+    <section class="container my-5 py-4">
+      <a
+        href="../production.html"
+        class="text-decoration-none text-dark fw-bold mb-4 d-inline-block"
+        ><i class="bi bi-arrow-left me-1"></i> QUAY LẠI DỊCH VỤ</a
+      >
+
+      <div class="row mb-5">
+        <div class="col-lg-10 mx-auto text-center">
+          <span class="badge bg-dark text-warning mb-3 px-3 py-2 fs-6"
+            >Video Editing</span
+          >
+          <h1
+            class="display-5 fw-bold mb-4"
+            style="color: var(--schedio-blue-dark)"
+          >
+            Edit Music Video & Kỹ Xảo VFX
+          </h1>
+          <p
+            class="lead text-muted mb-4"
+            style="text-align: justify; text-justify: inter-word"
+          >
+            Bạn đã có source quay (source thô) nhưng chưa biết làm thế nào để
+            biến nó thành một MV hoàn chỉnh, chuyên nghiệp? Dịch vụ Edit MV của
+            chúng tôi sẽ giúp bạn kể câu chuyện âm nhạc của mình một cách sống
+            động nhất.
+          </p>
+          <p
+            class="text-muted"
+            style="text-align: justify; text-justify: inter-word"
+          >
+            Chúng tôi xử lý từ các khâu cơ bản như cắt ghép đúng nhịp, chỉnh màu
+            (Color Grading) tạo mood, cho đến các kỹ thuật nâng cao như thêm
+            hiệu ứng thị giác (VFX), kỹ xảo 3D, rung giật, nháy sáng... để tạo
+            nên những thước phim ấn tượng chuẩn mainstream.
+          </p>
+        </div>
+      </div>
+
+      <hr class="my-5 opacity-25" />
+
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-4">
+          <h3 class="fw-bold" style="color: var(--schedio-blue-dark)">
+            CÁC DỰ ÁN ĐÃ DỰNG
+          </h3>
+          <p class="text-muted">
+            Nhấn vào ảnh để xem (Ảnh tĩnh trích xuất từ MV)
+          </p>
+        </div>
+        <div class="row g-4 demo-gallery">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/dongbon.jpg"
+              alt="Demo MV 1"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/caydibro.jpg"
+              alt="Demo MV 2"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/chem.jpg"
+              alt="Demo MV 3"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              src="../assets/images/nammoitoioi.jpg"
+              alt="Demo MV 4"
+              onclick="openLightbox(this.src)"
+            />
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-5 opacity-25" />
+
+      <div class="row mb-5 justify-content-center">
+        <div class="col-lg-10">
+          <h3
+            class="fw-bold text-center mb-5"
+            style="color: var(--schedio-blue-dark)"
+          >
+            BẢNG GIÁ CHI TIẾT
+          </h3>
+
+          <div class="table-responsive shadow-sm rounded-3 mb-5">
+            <table class="table table-hover table-bordered mb-0 align-middle">
+              <thead class="table-dark text-center">
+                <tr>
+                  <th class="py-3">Gói Dịch Vụ Edit M/V</th>
+                  <th class="py-3" style="width: 30%">Đơn giá</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ghép suộc cơ bản.</td>
+                  <td
+                    class="text-center fw-bold"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    50.000đ
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ghép suộc + Kéo màu đẹp (Color Grading).</td>
+                  <td
+                    class="text-center fw-bold"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    100.000đ
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Ghép suộc + Kéo màu đẹp + Hiệu ứng rung nháy sáng + Chữ 3D.
+                  </td>
+                  <td
+                    class="text-center fw-bold"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    200.000đ
+                  </td>
+                </tr>
+                <tr class="bg-light">
+                  <td class="fst-italic text-muted text-end pe-4">
+                    + Thêm phụ đề Full Lyrics
+                  </td>
+                  <td class="text-center fst-italic fw-bold text-muted">
+                    +50.000đ
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="card border-primary shadow-sm mt-5">
+            <div class="card-body p-4 text-center bg-light rounded-3">
+              <h4 class="fw-bold text-primary mb-3">
+                Gói dựng MV kỹ xảo (VFX) chuyên sâu
+              </h4>
+              <p class="mb-2">
+                Thực hiện bởi
+                <strong class="text-dark">CTV Nguyễn Hoàng Nam</strong>
+              </p>
+              <p class="text-muted small mb-4">
+                Gói cao cấp bao gồm các hiệu ứng kỹ xảo phức tạp, chuyển cảnh
+                mượt mà chuẩn MV Mainstream.
+              </p>
+              <h2
+                class="display-5 fw-bold mb-0"
+                style="color: var(--price-color)"
+              >
+                4.500.000đ
+              </h2>
+            </div>
+          </div>
+
+          <div class="mt-5 text-center">
+            <a
+              href="https://zalo.me/0344377104"
+              target="_blank"
+              class="btn btn-gradient btn-lg rounded-pill px-5 shadow fw-bold"
+            >
+              <i class="bi bi-film me-2"></i> Nhắn Zalo tư vấn & gửi source
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0 text-center">
+            <img id="lightboxImage" src="" alt="Full Screen Demo" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dynamic-footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../header.js"></script>
+    <script src="../footer.js"></script>
+    <script>
+      function openLightbox(imageSrc) {
+        document.getElementById("lightboxImage").src = imageSrc;
+        var myModal = new bootstrap.Modal(
+          document.getElementById("lightboxModal"),
+        );
+        myModal.show();
+      }
+    </script>
+  </body>
+</html>

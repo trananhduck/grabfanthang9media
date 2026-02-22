@@ -2,19 +2,19 @@
   "channels": {
     "grabfan": {
       "name": "Fanpage Grab Fan Tháng 9",
-      "sub": "96K",
+      "sub": "101K",
       "link": "https://www.facebook.com/grabfanthang9",
       "img": "assets/images/gft9.jpg"
     },
     "thamthinh": {
       "name": "Fanpage Rap Fan Thám Thính",
-      "sub": "31K",
+      "sub": "32K",
       "link": "https://www.facebook.com/rapfanthamthinh",
       "img": "assets/images/rftt.jpg"
     },
     "nnr": {
       "name": "Fanpage Người Nghe Rap",
-      "sub": "1.3K",
+      "sub": "4.3K",
       "link": "https://www.facebook.com/nguoingherap",
       "img": "assets/images/nnr.jpg"
     },
@@ -209,7 +209,7 @@
     },
     {
       "name": "Sạp Show 5",
-      "img": "https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-1/490876434_728345673090791_5850085119612938751_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFf5ouiR7Mto6ooDnITUe4ac_bpiUYhT_Vz9umJRiFP9bPoRX1nxBYkxYVJt9bGcjsSKcEW1_1rg7AFWc7sR2ms&_nc_ohc=ijbBZYLbkGoQ7kNvwHVYvYT&_nc_oc=Adm8xO4qbWvxF9-QEzYdhIFWl2jPHhVmilLvCs-gg-oQaGQGrH3oo_Fvh0VKZYh3tiI&_nc_zt=24&_nc_ht=scontent.fdad1-2.fna&_nc_gid=LX4GsxEuTRqheX2YfFfhTQ&oh=00_AfuSJV6ykuIbXHWeRWiWX8piGvFDpFsn4IwmesWFW00Tig&oe=69935F34"
+      "img": "assets/images/sapshow.jpg"    
     },
     {
       "name": "Rocky CDE",
@@ -240,7 +240,7 @@
     {
       "title": "Sạp Show 5",
       "desc": "Hỗ trợ truyền thông sự kiện gồm Wxrdie, Dangrangto, Obito, Binz và nhiều cái tên nổi bật khác, phủ sóng 3 kênh, đạt 350k reach sau 1 tuần. Thu hút lượng lớn người hâm mộ đến tham gia sự kiện",
-      "img": "https://scontent.fdad1-2.fna.fbcdn.net/v/t39.30808-1/490876434_728345673090791_5850085119612938751_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFf5ouiR7Mto6ooDnITUe4ac_bpiUYhT_Vz9umJRiFP9bPoRX1nxBYkxYVJt9bGcjsSKcEW1_1rg7AFWc7sR2ms&_nc_ohc=ijbBZYLbkGoQ7kNvwHVYvYT&_nc_oc=Adm8xO4qbWvxF9-QEzYdhIFWl2jPHhVmilLvCs-gg-oQaGQGrH3oo_Fvh0VKZYh3tiI&_nc_zt=24&_nc_ht=scontent.fdad1-2.fna&_nc_gid=LX4GsxEuTRqheX2YfFfhTQ&oh=00_AfuSJV6ykuIbXHWeRWiWX8piGvFDpFsn4IwmesWFW00Tig&oe=69935F34"
+      "img": "assets/images/sapshow.jpg"
     },
     {
       "title": "Album 'L2K' - LOW G",
@@ -255,7 +255,41 @@
     {
       "title": "Sự kiện của GrabFood tháng 11/2025",
       "desc": "Hỗ trợ truyền thông chương trình sale của GrabFood, tăng lượng tiếp cận tự nhiên",
-      "img": "https://scontent.fdad1-4.fna.fbcdn.net/v/t39.30808-6/588650234_122193204266548003_1284931461977025093_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFf3flBJKd0Yv7p_q7IuR2gUeDI07wfwvJR4MjTvB_C8h-QI6uCAUdMMgXY4bb2C0-hBCc39dLEaHjm9XfgWJzc&_nc_ohc=dkYSO6HN8A4Q7kNvwEobqzb&_nc_oc=Adl_xdiGLTK1NCgAhxpidkIVy8C24GzGSlRuz6WelrDtXuGPUMO46HeVpuwA84TUli4&_nc_zt=23&_nc_ht=scontent.fdad1-4.fna&_nc_gid=QEZdvYm0O4c3PoXkI-1pww&oh=00_AfvUQGnU31URgYTeRDQcjuuwDqI1UB4m1KB0Mo_YPSBoNg&oe=69937213"
+      "img": "./assets/images/grabfood.jpg"
+    }
+  ],
+  "production": [
+    {
+      "id": "banner",
+      "icon": "bi-palette-fill",
+      "title": "Thiết kế banner / Artwork",
+      "desc": "Thiết kế ảnh bìa bài hát, poster sự kiện. Đa dạng phong cách từ typography, ghép ảnh 3D đến vẽ minh họa nghệ thuật.",
+      "price_range": "50.000đ - 1.000.000đ+",
+      "detail_link": "./production/banner.html"
+    },
+    {
+      "id": "lyrics",
+      "icon": "bi-type-bold",
+      "title": "Sản xuất Lyrics Video / Animation",
+      "desc": "Từ video lyrics cơ bản, text animation nổi bật đến video animation vẽ tay có cốt truyện phức tạp (ekip 5-7 người).",
+      "price_range": "50.000đ - 5.000.000đ+",
+      "detail_link": "./production/lyrics.html"
+    },
+    {
+      "id": "mv",
+      "icon": "bi-film",
+      "title": "Edit Music Video (MV) & VFX",
+      "desc": "Dựng MV chuyên nghiệp: ghép source, color grading, kỹ xảo VFX, rung nháy sáng và 3D typography.",
+      "price_range": "50.000đ - 4.500.000đ+",
+      "detail_link": "./production/mv.html"
+    },
+    {
+      "id": "beat",
+      "icon": "bi-music-note-list",
+      "title": "Sản xuất Beat",
+      "desc": "Làm beat đa dạng thể loại (Detroit, Jersey, NYC Drill, Hoodtrap...) từ đơn giản đến phức tạp, có chuyển beat.",
+      "price_range": "100.000đ - 300.000đ+",
+      "detail_link": "./production/beat.html"
     }
   ]
 }

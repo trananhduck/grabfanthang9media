@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bảng giá booking</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      /* Đã xóa hiệu ứng hover của nút */
+      .btn-demo {
+        font-size: 0.75rem;
+        padding: 2px 8px;
+        margin-top: 5px;
+        border-radius: 4px;
+        background-color: #e9ecef;
+        color: #333;
+        border: 1px solid #ced4da;
+        transition: all 0.2s;
+      }
+
+      /* CSS cho phần Banner Giới thiệu mới */
+      .services-hero {
+        background: linear-gradient(
+          135deg,
+          var(--schedio-blue-dark, #0f172a) 0%,
+          #1e293b 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .services-hero::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(
+          circle,
+          rgba(255, 193, 7, 0.08) 0%,
+          transparent 60%
+        );
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="dynamic-header"></div>
+
+    <section class="services-hero py-5 text-white">
+      <div class="container py-5 position-relative z-1">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 text-center text-lg-start">
+            <span
+              class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold fs-6"
+            >
+              Phủ sóng đa nền tảng
+            </span>
+            <h1 class="display-4 fw-bold mb-4">
+              BẢNG GIÁ <span class="text-warning">BOOKING</span>
+            </h1>
+            <p
+              class="lead opacity-90 mb-4"
+              style="text-align: justify; text-justify: inter-word"
+            >
+              Sở hữu hệ sinh thái cộng đồng Rap/Hip-hop lớn mạnh với hơn
+              <strong class="text-white">100.000+ followers</strong> trung
+              thành. Grab Fan Tháng 9 Media là cầu nối vững chắc đưa âm nhạc và
+              thông điệp của bạn chạm đến đúng tệp khán giả mục tiêu.
+            </p>
+            <p
+              class="text-light opacity-75 mb-5"
+              style="text-align: justify; text-justify: inter-word"
+            >
+              Dù bạn là một Artist Underground/Indie đang tìm kiếm những lượt
+              nghe đầu tiên, một nghệ sĩ Showbiz cần bùng nổ truyền thông, hay
+              một nhà tổ chức sự kiện muốn sold-out vé nhanh chóng, Grab Fan
+              Tháng 9 Media đều có các gói dịch vụ tối ưu hiệu quả nhất cho bạn.
+            </p>
+            <a
+              href="#danh-sach-bang-gia"
+              class="btn btn-warning text-dark btn-lg fw-bold rounded-pill px-5 shadow-sm"
+            >
+              XEM GÓI DỊCH VỤ <i class="bi bi-arrow-down ms-2"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="position-relative mt-4 mt-lg-0">
+              <div
+                class="position-absolute top-0 end-0 bg-warning rounded-4 opacity-75"
+                style="
+                  width: 100%;
+                  height: 100%;
+                  transform: translate(15px, 15px);
+                "
+              ></div>
+
+              <img
+                src="https://images2.thanhnien.vn/zoom/686_429/528068263637045248/2023/3/29/nhac-rap-la-gi-net-dac-trung-va-noi-bat-cua-dong-1-168007394349821909362-0-0-573-917-crop-16800739587151241411938.jpg"
+                alt="Music Event Crowd"
+                class="img-fluid rounded-4 shadow-lg position-relative z-1"
+                style="object-fit: cover; width: 100%; min-height: 350px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="danh-sach-bang-gia" class="container my-5 pt-4">
+      <ul
+        class="nav nav-pills justify-content-center mb-5"
+        id="pills-tab"
+        role="tablist"
+      >
+        <li class="nav-item">
+          <button
+            class="nav-link active fw-bold"
+            id="pills-undeground-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-undeground"
+          >
+            Nghệ sĩ Underground / Indie
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link fw-bold"
+            id="pills-showbiz-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-showbiz"
+          >
+            Nghệ sĩ Showbiz
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link fw-bold"
+            id="pills-event-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-event"
+          >
+            Sự kiện/Hạng mục khác
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-undeground">
+          <div class="table-responsive shadow-lg rounded-4 bg-white">
+            <table class="table table-bordered mb-0 align-middle text-center">
+              <thead class="table-light">
+                <tr>
+                  <th class="py-4" style="width: 8%">Gói</th>
+                  <th class="py-4 text-start ps-4" style="width: 25%">
+                    Mô Tả Dịch Vụ
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/grabfanthang9"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Page Grab<br />Fan Tháng 9</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/rapfanthamthinh"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Page Rap Fan<br />Thám Thính</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/nguoingherap"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Page<br />Người Nghe Rap</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/groups/8276007849195211"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Group Cộng đồng<br />Grab Việt UG</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.tiktok.com/@grabfanthang9"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >TikTok<br />Grab Fan T9</a
+                    >
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="ug-table-body"></tbody>
+            </table>
+          </div>
+          <p class="text-danger small fst-italic mt-3 ms-2">
+            <i class="bi bi-exclamation-circle-fill me-1"></i> Lưu ý: Link sản
+            phẩm được đăng kèm trong phần bình luận.
+          </p>
+        </div>
+
+        <div class="tab-pane fade" id="pills-showbiz">
+          <div class="table-responsive shadow-lg rounded-4 bg-white">
+            <table class="table table-bordered mb-0 align-middle text-center">
+              <thead class="table-light">
+                <tr>
+                  <th class="py-4" style="width: 8%">Gói</th>
+                  <th class="py-4 text-start ps-4" style="width: 25%">
+                    Mô Tả Dịch Vụ
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/grabfanthang9"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Page Grab<br />Fan Tháng 9</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/rapfanthamthinh"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Page Rap Fan<br />Thám Thính</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/nguoingherap"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Page<br />Người Nghe Rap</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.facebook.com/groups/8276007849195211"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >Group Cộng đồng<br />Grab Việt UG</a
+                    >
+                  </th>
+                  <th class="py-4 align-middle">
+                    <a
+                      href="https://www.tiktok.com/@grabfanthang9"
+                      target="_blank"
+                      class="channel-link text-dark text-decoration-none"
+                      >TikTok<br />Grab Fan T9</a
+                    >
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="showbiz-table-body"></tbody>
+            </table>
+          </div>
+          <p class="text-danger small fst-italic mt-3 ms-2">
+            <i class="bi bi-exclamation-circle-fill me-1"></i> Lưu ý: Link sản
+            phẩm được đăng kèm trong phần bình luận.
+          </p>
+        </div>
+
+        <div class="tab-pane fade" id="pills-event">
+          <div class="table-responsive shadow-lg rounded-4 bg-white">
+            <table class="table table-bordered mb-0 align-middle text-center">
+              <thead class="table-light">
+                <tr>
+                  <th class="py-4">Số Lượng Post</th>
+                  <th class="py-4 align-middle">Page Grab Fan Tháng 9</th>
+                  <th class="py-4 align-middle">Page Thám Thính</th>
+                  <th class="py-4 align-middle">Page Người Nghe Rap</th>
+                  <th class="py-4 align-middle">
+                    Group Cộng đồng Grab Việt UG
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="event-table-body"></tbody>
+            </table>
+          </div>
+          <p class="text-danger small fst-italic mt-3 text-center">
+            <i class="bi bi-exclamation-circle-fill me-1"></i> Lưu ý: Link sự
+            kiện được đăng kèm trong phần bình luận.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div id="dynamic-footer"></div>
+
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg rounded-4">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title fw-bold text-primary" id="demoTitle">
+              Demo
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-center pb-5">
+            <i
+              class="bi bi-images display-1 text-muted opacity-25 mb-3 d-block"
+            ></i>
+            <p id="demoDesc" class="lead text-dark"></p>
+            <a
+              href="https://zalo.me/0344377104"
+              target="_blank"
+              class="btn btn-warning fw-bold px-4 rounded-pill mt-3"
+            >
+              <i class="bi bi-chat-text-fill me-2"></i>Nhắn Zalo Xem Ảnh Thực Tế
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+
+    <script>
+      function updateDemo(title, desc) {
+        document.getElementById("demoTitle").innerText = "Tham Khảo " + title;
+        document.getElementById("demoDesc").innerHTML =
+          "Gói này bao gồm:<br><strong>" + desc + "</strong>";
+      }
+
+      fetch("data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const ugBody = document.getElementById("ug-table-body");
+          let ugHtml = "";
+          data.pricing.underground.forEach((row, index) => {
+            const tiktokCell =
+              index === 0
+                ? `<td rowspan="${data.pricing.underground.length}" class="align-middle fw-bold tiktok-cell" style="font-size: 1.1rem; color: var(--price-color);">${data.pricing.tiktok_price_ug}</td>`
+                : "";
+            ugHtml += `<tr><td class="fw-bold bg-light">${row.code}</td><td class="text-start ps-4"><div class="small mb-2">${row.desc}</div><button class="btn btn-sm btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#demoModal" onclick="updateDemo('${row.code}', '${row.desc}')"><i class="bi bi-eye me-1"></i> Xem chi tiết</button></td><td class="fw-bold" style="font-size: 1.05rem;">${row.p1}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p2}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p3}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p4}</td>${tiktokCell}</tr>`;
+          });
+          ugBody.innerHTML = ugHtml;
+
+          const sbBody = document.getElementById("showbiz-table-body");
+          let sbHtml = "";
+          data.pricing.showbiz.forEach((row, index) => {
+            const tiktokCell =
+              index === 0
+                ? `<td rowspan="${data.pricing.showbiz.length}" class="align-middle fw-bold tiktok-cell" style="font-size: 1.1rem; color: var(--price-color);">${data.pricing.tiktok_price_showbiz}</td>`
+                : "";
+            sbHtml += `<tr><td class="fw-bold bg-light">${row.code}</td><td class="text-start ps-4"><div class="small mb-2">${row.desc}</div><button class="btn btn-sm btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#demoModal" onclick="updateDemo('${row.code}', '${row.desc}')"><i class="bi bi-eye me-1"></i> Xem chi tiết</button></td><td class="fw-bold" style="font-size: 1.05rem;">${row.p1}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p2}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p3}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p4}</td>${tiktokCell}</tr>`;
+          });
+          sbBody.innerHTML = sbHtml;
+
+          const evBody = document.getElementById("event-table-body");
+          let evHtml = "";
+          data.pricing.event.forEach((row) => {
+            evHtml += `<tr><td class="fw-bold bg-light">${row.posts}</td><td class="fw-bold" style="font-size: 1.1rem; color: var(--price-color);">${row.p1}</td><td class="fw-bold" style="font-size: 1.1rem; color: var(--price-color);">${row.p2}</td><td class="fw-bold" style="font-size: 1.1rem; color: var(--price-color);">${row.p3}</td><td class="fw-bold" style="font-size: 1.1rem; color: var(--price-color);">${row.p4}</td></tr>`;
+          });
+          evBody.innerHTML = evHtml;
+        });
+    </script>
+  </body>
+</html>
