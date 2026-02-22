@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <ul class="list-unstyled mb-0 text-start">
                 <li class="mb-2">
                   <a href="https://zalo.me/0344377104" target="_blank" class="text-decoration-none text-dark d-flex align-items-center">
-                    <img src="${prefix}assets/images/qr.png" width="20" height="20" class="me-2" alt="Zalo" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="20" height="20" class="me-2" alt="Zalo" />
                     <span class="fw-bold">0344 377 104</span>
                   </a>
                 </li>
