@@ -19,13 +19,31 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
 
     <style>
-      .demo-gallery img {
+      /* Cập nhật CSS để áp dụng cho cả img và video trong gallery */
+      .demo-gallery img,
+      .demo-gallery video {
         width: 100%;
         height: 200px;
         object-fit: cover;
         border-radius: 8px;
         cursor: pointer;
-        /* Đã xóa hiệu ứng transition và hover */
+        background-color: #000; /* Nền đen cho video chưa load kịp */
+      }
+
+      /* Thêm icon Play nhỏ nằm đè lên góc phải trên cùng của video */
+      .video-indicator {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none; /* Không cản trở click */
       }
 
       #lightboxModal .modal-header,
@@ -45,15 +63,16 @@
         padding: 0.5rem;
         opacity: 0.8;
       }
-      #lightboxImage {
+      #lightboxImage,
+      #lightboxVideo {
         width: 100%;
         height: auto;
         max-height: 90vh;
         object-fit: contain;
         display: block;
         margin: 0 auto;
+        outline: none;
       }
-      /* Màu nền riêng cho bảng animation */
       .table-dark-custom {
         --bs-table-bg: #212529;
         --bs-table-color: #fff;
@@ -115,37 +134,54 @@
             SẢN PHẨM TIÊU BIỂU
           </h3>
           <p class="text-muted">
-            Nhấn vào ảnh để xem (Ảnh tĩnh minh họa cho style video)
+            Nhấn vào để xem đầy đủ (Hỗ trợ cả hình ảnh & video)
           </p>
         </div>
         <div class="row g-4 demo-gallery">
-          <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../assets/images/lyrics1.png"
-              alt="Demo Lyrics 1"
-              onclick="openLightbox(this.src)"
-            />
+          <div class="col-12 col-md-6 col-lg-3 position-relative">
+            <video
+              src="../assets/images/gio.mp4"
+              muted
+              loop
+              onmouseenter="this.play()"
+              onmouseleave="this.pause()"
+              onclick="openMedia('video', this.src)"
+            ></video>
+            <div class="video-indicator"><i class="bi bi-play-fill"></i></div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../assets/images/lyrics2.png"
-              alt="Demo Lyrics 2"
-              onclick="openLightbox(this.src)"
-            />
+          <div class="col-12 col-md-6 col-lg-3 position-relative">
+            <video
+              src="../assets/images/1lansai.mp4"
+              muted
+              loop
+              onmouseenter="this.play()"
+              onmouseleave="this.pause()"
+              onclick="openMedia('video', this.src)"
+            ></video>
+            <div class="video-indicator"><i class="bi bi-play-fill"></i></div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../assets/images/lyrics3.png"
-              alt="Demo Lyrics 3"
-              onclick="openLightbox(this.src)"
-            />
+
+          <div class="col-12 col-md-6 col-lg-3 position-relative">
+            <video
+              src="../assets/images/doimatem.mp4"
+              muted
+              loop
+              onmouseenter="this.play()"
+              onmouseleave="this.pause()"
+              onclick="openMedia('video', this.src)"
+            ></video>
+            <div class="video-indicator"><i class="bi bi-play-fill"></i></div>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../assets/images/lyrics4.png"
-              alt="Demo Lyrics 4"
-              onclick="openLightbox(this.src)"
-            />
+          <div class="col-12 col-md-6 col-lg-3 position-relative">
+            <video
+              src="../assets/images/anxiety.mp4"
+              muted
+              loop
+              onmouseenter="this.play()"
+              onmouseleave="this.pause()"
+              onclick="openMedia('video', this.src)"
+            ></video>
+            <div class="video-indicator"><i class="bi bi-play-fill"></i></div>
           </div>
         </div>
       </div>
@@ -251,8 +287,8 @@
                         3.000.000đ
                       </td>
                       <td>
-                        Animation ánh sáng đẹp, sáng tác nội dung (M/V trở thành
-                        phim ngắn, Ekip 4 người).
+                        Animation ánh sáng đẹp, sáng tác nội dung theo nhạc (M/V
+                        trở thành phim ngắn, Ekip 4 người).
                       </td>
                     </tr>
                     <tr>
@@ -297,8 +333,20 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body p-0 text-center">
-            <img id="lightboxImage" src="" alt="Full Screen Demo" />
+          <div class="modal-body p-0 text-center position-relative">
+            <img
+              id="lightboxImage"
+              src=""
+              alt="Full Screen Demo"
+              style="display: none"
+            />
+
+            <video
+              id="lightboxVideo"
+              src=""
+              controls
+              style="display: none"
+            ></video>
           </div>
         </div>
       </div>
@@ -308,14 +356,41 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../header.js"></script>
     <script src="../footer.js"></script>
+
     <script>
-      function openLightbox(imageSrc) {
-        document.getElementById("lightboxImage").src = imageSrc;
+      function openMedia(type, src) {
+        const imgEl = document.getElementById("lightboxImage");
+        const vidEl = document.getElementById("lightboxVideo");
+
+        if (type === "image") {
+          // Xử lý nếu là ảnh
+          vidEl.style.display = "none";
+          vidEl.pause();
+          imgEl.src = src;
+          imgEl.style.display = "block";
+        } else if (type === "video") {
+          // Xử lý nếu là video
+          imgEl.style.display = "none";
+          vidEl.src = src;
+          vidEl.style.display = "block";
+          vidEl.play(); // Tự động phát khi mở lên
+        }
+
+        // Hiện hộp thoại
         var myModal = new bootstrap.Modal(
           document.getElementById("lightboxModal"),
         );
         myModal.show();
       }
+
+      // SỰ KIỆN: Khi đóng hộp thoại (Modal) thì phải TẮT VIDEO
+      document
+        .getElementById("lightboxModal")
+        .addEventListener("hidden.bs.modal", function () {
+          const vidEl = document.getElementById("lightboxVideo");
+          vidEl.pause(); // Dừng video
+          vidEl.src = ""; // Xóa src để giải phóng băng thông
+        });
     </script>
   </body>
 </html>
