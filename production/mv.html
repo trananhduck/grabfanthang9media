@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit MV / VFX</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -27,14 +27,9 @@
         object-fit: cover;
         border-radius: 8px;
         cursor: pointer;
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
+        /* Đã xóa hiệu ứng transition và hover */
       }
-      .demo-gallery img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-      }
+
       #lightboxModal .modal-header,
       #lightboxModal .modal-footer {
         border: none;
@@ -159,7 +154,7 @@
           </h3>
 
           <div class="table-responsive shadow-sm rounded-3 mb-5">
-            <table class="table table-hover table-bordered mb-0 align-middle">
+            <table class="table table-bordered mb-0 align-middle">
               <thead class="table-dark text-center">
                 <tr>
                   <th class="py-3">Gói Dịch Vụ Edit M/V</th>
@@ -168,7 +163,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Ghép suộc cơ bản.</td>
+                  <td>Ghép source cơ bản.</td>
                   <td
                     class="text-center fw-bold"
                     style="font-size: 1.1rem; color: var(--price-color)"
@@ -177,7 +172,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>Ghép suộc + Kéo màu đẹp (Color Grading).</td>
+                  <td>Ghép source + Kéo màu đẹp (Color Grading).</td>
                   <td
                     class="text-center fw-bold"
                     style="font-size: 1.1rem; color: var(--price-color)"
@@ -187,7 +182,8 @@
                 </tr>
                 <tr>
                   <td>
-                    Ghép suộc + Kéo màu đẹp + Hiệu ứng rung nháy sáng + Chữ 3D.
+                    Ghép source + Kéo màu đẹp + Hiệu ứng rung nháy sáng + Chữ
+                    3D.
                   </td>
                   <td
                     class="text-center fw-bold"
@@ -196,6 +192,19 @@
                     200.000đ
                   </td>
                 </tr>
+
+                <tr>
+                  <td>
+                    Ghép source + Kéo màu đẹp + Hiệu ứng cơ thể + Đồ họa 3D.
+                  </td>
+                  <td
+                    class="text-center fw-bold"
+                    style="font-size: 1.1rem; color: var(--price-color)"
+                  >
+                    1.500.000đ
+                  </td>
+                </tr>
+
                 <tr class="bg-light">
                   <td class="fst-italic text-muted text-end pe-4">
                     + Thêm phụ đề Full Lyrics
