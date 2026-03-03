@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const currentPath = window.location.pathname.split("/").pop();
-    const isSubFolder = window.location.pathname.includes('/production/');
-    const prefix = isSubFolder ? '../' : '';
+  const currentPath = window.location.pathname.split("/").pop();
+  const isSubFolder = window.location.pathname.includes('/production/');
+  const prefix = isSubFolder ? '../' : '';
 
-    const headerHTML = `
+  const headerHTML = `
     <style>
       /* Hiệu ứng tự động xổ Dropdown khi di chuột (chỉ áp dụng cho màn hình lớn xl) */
       @media (min-width: 1200px) {
@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a class="dropdown-item py-2 ${currentPath === "lyrics.html" ? "active fw-bold" : ""}" href="${prefix}production/lyrics.html"><i class="bi bi-type-bold text-warning me-2"></i>Sản xuất Lyrics Video</a></li>
                 <li><a class="dropdown-item py-2 ${currentPath === "mv.html" ? "active fw-bold" : ""}" href="${prefix}production/mv.html"><i class="bi bi-film text-warning me-2"></i>Edit Music Video & VFX</a></li>
                 <li><a class="dropdown-item py-2 ${currentPath === "beat.html" ? "active fw-bold" : ""}" href="${prefix}production/beat.html"><i class="bi bi-music-note-list text-warning me-2"></i>Sản xuất beat độc quyền</a></li>
-              </ul>
+              <li><a class="dropdown-item py-2 ${currentPath === "mix-master.html" ? "active fw-bold" : ""}" href="${prefix}production/mix-master.html"><i class="bi bi-sliders text-warning me-2"></i>Mix / Master chuyên nghiệp</a></li>
+                </ul>
             </li>
 
             <li class="nav-item">
@@ -73,6 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
     </nav>
   `;
 
-    const headerContainer = document.getElementById("dynamic-header");
-    if (headerContainer) headerContainer.innerHTML = headerHTML;
+  const headerContainer = document.getElementById("dynamic-header");
+  if (headerContainer) headerContainer.innerHTML = headerHTML;
 });

@@ -2,7 +2,7 @@
   "channels": {
     "grabfan": {
       "name": "Fanpage Grab Fan Tháng 9",
-      "sub": "101K",
+      "sub": "102K",
       "link": "https://www.facebook.com/grabfanthang9",
       "img": "assets/images/gft9.jpg"
     },
@@ -296,6 +296,14 @@
       "desc": "Làm beat đa dạng thể loại (Detroit, Jersey, NYC Drill, Hoodtrap...) từ đơn giản đến phức tạp, có chuyển beat.",
       "price_range": "100.000đ - 300.000đ+",
       "detail_link": "./production/beat.html"
+    },
+    {
+      "id": "mix-master",
+      "icon": "bi-sliders",
+      "title": "Mix / Master",
+      "desc": "Xử lý âm thanh, làm sạch vocal, mix beat và mastering đạt tiêu chuẩn các nền tảng streaming (Spotify, Apple Music, YouTube).",
+      "price_range": "300.000đ - 1.000.000đ+",
+      "detail_link": "./production/mix-master.html"
     }
   ]
 }
