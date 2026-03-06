@@ -238,8 +238,15 @@
     {
       "name": "OKX",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw1Q7qLN__RkZ_0qBvie_mFbWrNhg_x6tbEA&s"
-    }
-    
+    },
+    {
+      "name": "DJ Tít",
+      "img": "https://images2.thanhnien.vn/528068263637045248/2023/4/5/tpw02223-1680674873517202978009.jpg"
+    },
+    {
+      "name": "DiamonK",
+      "img": "./assets/images/diamonk.jpg"
+    }  
 
   ],
   "projects": [
