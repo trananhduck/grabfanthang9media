@@ -61,16 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
             </li>
 
             <li class="nav-item">
+              <a class="nav-link fw-bold text-nowrap ${currentPath === "blog.html" || window.location.pathname.includes('/blog/') ? "active" : ""}" href="${prefix}blog.html">Bài viết</a>
+            </li>
+
+            <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "clients.html" ? "active" : ""}" href="${prefix}clients.html">Khách hàng tiêu biểu</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "projects.html" ? "active" : ""}" href="${prefix}projects.html">Dự án nổi bật</a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-nowrap ${currentPath === "blog.html" || window.location.pathname.includes('/blog/') ? "active" : ""}" href="${prefix}blog.html">Bài viết</a>
-            </li>
-
+            
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "donate.html" ? "active" : ""}" href="${prefix}donate.html">Donate</a>
             </li>
