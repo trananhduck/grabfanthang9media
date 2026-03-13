@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const currentPath = window.location.pathname.split("/").pop();
-  const isSubFolder = window.location.pathname.includes('/production/');
+  const isSubFolder = window.location.pathname.includes('/production/') || window.location.pathname.includes('/blog/');
   const prefix = isSubFolder ? '../' : '';
 
   const headerHTML = `
@@ -32,21 +32,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <nav class="navbar navbar-expand-xl sticky-top shadow-sm py-2">
       <div class="container">
-        <a class="navbar-brand fw-bold fs-4" href="${prefix}index.html">GRAB FAN THÁNG 9</a>
+        <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" href="${prefix}index.html">
+          <i class="bi bi-house-door-fill me-2 fs-3 text-dark"></i>
+          <span class="text-dark">Trang chủ</span>
+        </a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto gap-xl-2">
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-nowrap ${currentPath === "index.html" || currentPath === "" ? "active" : ""}" href="${prefix}index.html">Trang chủ</a>
-            </li>
+          <ul class="navbar-nav ms-auto gap-xl-2 align-items-xl-center">
+            
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "booking.html" ? "active" : ""}" href="${prefix}booking.html">Bảng giá booking</a>
             </li>
             
             <li class="nav-item dropdown">
-              <a class="nav-link fw-bold text-nowrap dropdown-toggle ${currentPath === "production.html" || isSubFolder ? "active" : ""}" href="${prefix}production.html" id="productionDropdown">
+              <a class="nav-link fw-bold text-nowrap dropdown-toggle ${currentPath === "production.html" || isSubFolder && !window.location.pathname.includes('/blog/') ? "active" : ""}" href="${prefix}production.html" id="productionDropdown">
                 Dịch vụ khác
               </a>
               <ul class="dropdown-menu shadow border-0 rounded-3 mt-xl-2" aria-labelledby="productionDropdown">
@@ -54,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a class="dropdown-item py-2 ${currentPath === "lyrics.html" ? "active fw-bold" : ""}" href="${prefix}production/lyrics.html"><i class="bi bi-type-bold text-warning me-2"></i>Sản xuất Lyrics Video</a></li>
                 <li><a class="dropdown-item py-2 ${currentPath === "mv.html" ? "active fw-bold" : ""}" href="${prefix}production/mv.html"><i class="bi bi-film text-warning me-2"></i>Edit Music Video & VFX</a></li>
                 <li><a class="dropdown-item py-2 ${currentPath === "beat.html" ? "active fw-bold" : ""}" href="${prefix}production/beat.html"><i class="bi bi-music-note-list text-warning me-2"></i>Sản xuất beat độc quyền</a></li>
-              <li><a class="dropdown-item py-2 ${currentPath === "mix-master.html" ? "active fw-bold" : ""}" href="${prefix}production/mix-master.html"><i class="bi bi-sliders text-warning me-2"></i>Mix / Master chuyên nghiệp</a></li>
-                </ul>
+                <li><a class="dropdown-item py-2 ${currentPath === "mix-master.html" ? "active fw-bold" : ""}" href="${prefix}production/mix-master.html"><i class="bi bi-sliders text-warning me-2"></i>Mix / Master chuyên nghiệp</a></li>
+              </ul>
             </li>
 
             <li class="nav-item">
@@ -64,11 +66,15 @@ document.addEventListener("DOMContentLoaded", function () {
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "projects.html" ? "active" : ""}" href="${prefix}projects.html">Dự án nổi bật</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-nowrap ${currentPath === "blog.html" || window.location.pathname.includes('/blog/') ? "active" : ""}" href="${prefix}blog.html">Bài viết</a>
+            </li>
+
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "donate.html" ? "active" : ""}" href="${prefix}donate.html">Donate</a>
             </li>
           </ul>
-          
         </div>
       </div>
     </nav>
