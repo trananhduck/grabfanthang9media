@@ -18,6 +18,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      /* Style riêng cho Carousel Blog trang chủ */
+      .blog-carousel-item {
+        border: 1px solid #eaeaea;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        max-width: 800px; /* Giới hạn chiều rộng để băng chuyền nhìn gọn gàng */
+        margin: 0 auto;
+      }
+      .blog-carousel-img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+      /* Nút chuyển slide màu tối để dễ nhìn */
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(100%);
+      }
+    </style>
   </head>
   <body>
     <div id="dynamic-header"></div>
@@ -295,6 +317,179 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="container my-5 py-4">
+      <div class="d-flex justify-content-between align-items-end mb-4">
+        <div>
+          <h2 class="fw-bold mb-2" style="color: var(--schedio-blue-dark)">
+            Tạp chí Hiphop mới nhất
+          </h2>
+          <p class="text-muted mb-0">
+            Cập nhật tin tức và kiến thức nóng hổi từ cộng đồng.
+          </p>
+        </div>
+        <a
+          href="blog.html"
+          class="btn btn-outline-dark fw-bold d-none d-md-inline-block rounded-pill px-4"
+        >
+          Xem tất cả bài viết <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+
+      <div
+        id="blogCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-indicators" style="bottom: -50px">
+          <button
+            type="button"
+            data-bs-target="#blogCarousel"
+            data-bs-slide-to="0"
+            class="active bg-dark"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#blogCarousel"
+            data-bs-slide-to="1"
+            class="bg-dark"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#blogCarousel"
+            data-bs-slide-to="2"
+            class="bg-dark"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+
+        <div class="carousel-inner pb-5">
+          <div class="carousel-item active">
+            <div class="blog-carousel-item shadow-sm">
+              <img
+                src="https://kenh14cdn.com/203336854389633024/2025/6/18/thiet-ke-chua-co-ten-18-17501536413181883458615-1750205984504-17502059847992105548202.gif"
+                class="blog-carousel-img"
+                alt="HIEUTHUHAI"
+              />
+              <div class="p-4 d-flex flex-column text-center">
+                <span class="badge bg-primary mb-3 align-self-center"
+                  >Góc Nhìn</span
+                >
+                <h4
+                  class="fw-bold mb-3"
+                  style="color: var(--schedio-blue-dark)"
+                >
+                  Góc nhìn: HIEUTHUHAI có thực sự "Không có trình"?
+                </h4>
+                <p class="text-muted small mb-4 px-md-5">
+                  Bài viết này sẽ chỉ tập trung vào ÂM NHẠC của HIEUTHUHAI. Phải
+                  chăng vì sở hữu ngoại hình nổi bật mà anh bị gắn mác "không
+                  trình"?
+                </p>
+                <a
+                  href="blog/blog-1.html"
+                  class="btn btn-outline-dark fw-bold align-self-center px-5 rounded-pill"
+                  >Đọc tiếp</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="blog-carousel-item shadow-sm">
+              <img
+                src="https://images2.thanhnien.vn/528068263637045248/2024/8/27/b-ray-2-17247277262511950514470.jpg"
+                class="blog-carousel-img"
+                alt="B Ray"
+              />
+              <div class="p-4 d-flex flex-column text-center">
+                <span class="badge bg-warning text-dark mb-3 align-self-center"
+                  >Chuyện Nghề</span
+                >
+                <h4
+                  class="fw-bold mb-3"
+                  style="color: var(--schedio-blue-dark)"
+                >
+                  B Ray chia sẻ về những bài rap ngày xưa
+                </h4>
+                <p class="text-muted small mb-4 px-md-5">
+                  B Ray chia sẻ lí do và những câu chuyện thú vị chưa từng kể
+                  phía sau 2 track mang đậm dấu ấn storytelling một thời:
+                  "Reply" và "Lạc".
+                </p>
+                <a
+                  href="blog/blog-2.html"
+                  class="btn btn-outline-dark fw-bold align-self-center px-5 rounded-pill"
+                  >Đọc tiếp</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="blog-carousel-item shadow-sm">
+              <img
+                src="https://static.tuoitre.vn/tto/r/2017/06/29/eminem-014-1498724304.jpg"
+                class="blog-carousel-img"
+                alt="Eminem"
+              />
+              <div class="p-4 d-flex flex-column text-center">
+                <span class="badge bg-dark text-warning mb-3 align-self-center"
+                  >Cảm Hứng</span
+                >
+                <h4
+                  class="fw-bold mb-3"
+                  style="color: var(--schedio-blue-dark)"
+                >
+                  Vì sao Rapper không nên "chơi đồ"? Câu chuyện của Eminem
+                </h4>
+                <p class="text-muted small mb-4 px-md-5">
+                  Hành trình chạm đáy, cận kề cái ch.ết và nỗ lực học rap lại từ
+                  đầu của vị Vua nhạc Rap sau những chuỗi ngày nghiện ngập.
+                </p>
+                <a
+                  href="blog/blog-8.html"
+                  class="btn btn-outline-dark fw-bold align-self-center px-5 rounded-pill"
+                  >Đọc tiếp</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#blogCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Trước</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#blogCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sau</span>
+        </button>
+      </div>
+
+      <div class="col-12 text-center d-md-none mt-5">
+        <a
+          href="blog.html"
+          class="btn btn-outline-dark fw-bold rounded-pill px-4"
+        >
+          Xem tất cả bài viết <i class="bi bi-arrow-right ms-2"></i>
+        </a>
       </div>
     </section>
 
