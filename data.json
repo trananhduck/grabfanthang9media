@@ -2,7 +2,7 @@
   "channels": {
     "grabfan": {
       "name": "Grab Fan Tháng 9",
-      "sub": "103K",
+      "sub": "104K",
       "link": "https://www.facebook.com/grabfanthang9",
       "img": "assets/images/gft9.jpg"
     },
@@ -26,7 +26,7 @@
     },
     "tiktok": {
       "name": "TikTok Grab Fan Tháng 9",
-      "sub": "2.9K",
+      "sub": "3.1K",
       "link": "https://www.tiktok.com/@grabfanthang9",
       "img": "assets/images/gft9.jpg"
     }
@@ -171,7 +171,7 @@
         "p4": "270k"
       }
     ],
-    "tiktok_price_ug": "50K / Video",
+    "tiktok_price_ug": "60K / Video",
     "tiktok_price_showbiz": "100K / Video"
   },
   "clients": [
