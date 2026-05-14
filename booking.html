@@ -61,6 +61,7 @@
         transition: all 0.3s ease;
         border: 2px solid transparent;
         background-color: #fff;
+        cursor: pointer;
       }
       .pricing-card:hover {
         transform: translateY(-10px);
@@ -70,6 +71,11 @@
       .price-text {
         color: var(--schedio-blue-dark);
         font-size: 1.8rem;
+      }
+
+      /* Style cho bảng trong Modal Underground */
+      .ug-table td {
+        vertical-align: middle;
       }
     </style>
   </head>
@@ -136,7 +142,6 @@
       </div>
     </section>
 
-    <!-- KHU VỰC BẢNG GIÁ -->
     <section id="danh-sach-bang-gia" class="container my-5 pt-4">
       <ul
         class="nav nav-pills justify-content-center mb-5 gap-2"
@@ -170,7 +175,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-event"
           >
-            Sự kiện / Show diễn
+            Show diễn
           </button>
         </li>
         <li class="nav-item">
@@ -180,43 +185,23 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-brand"
           >
-            Nhãn hàng / Brands
+            Brands
           </button>
         </li>
       </ul>
 
       <div class="tab-content" id="pills-tabContent">
-        <!-- BẢNG GIÁ UNDERGROUND -->
         <div class="tab-pane fade show active" id="pills-undeground">
-          <div class="table-responsive shadow-lg rounded-4 bg-white">
-            <table class="table table-bordered mb-0 align-middle text-center">
-              <thead class="table-light">
-                <tr>
-                  <th class="py-4" style="width: 8%">Gói</th>
-                  <th class="py-4 text-start ps-4" style="width: 25%">
-                    Mô Tả Dịch Vụ
-                  </th>
-                  <th class="py-4 align-middle">Grab Fan<br />Tháng 9</th>
-                  <th class="py-4 align-middle">Rap Fan<br />Thám Thính</th>
-                  <th class="py-4 align-middle">Người Nghe Rap</th>
-                  <th class="py-4 align-middle">
-                    Cộng đồng Grab<br />Việt Underground
-                  </th>
-                  <th class="py-4 align-middle">
-                    TikTok Grab<br />Fan Tháng 9
-                  </th>
-                </tr>
-              </thead>
-              <tbody id="ug-table-body"></tbody>
-            </table>
-          </div>
-          <p class="text-danger small fst-italic mt-3 text-center">
+          <div
+            id="ug-cards-container"
+            class="row justify-content-center g-4"
+          ></div>
+          <p class="text-danger small fst-italic mt-4 text-center">
             <i class="bi bi-exclamation-circle-fill me-1"></i> Lưu ý: Link sản
             phẩm được đăng kèm trong phần bình luận.
           </p>
         </div>
 
-        <!-- BẢNG GIÁ SHOWBIZ -->
         <div class="tab-pane fade" id="pills-showbiz">
           <div id="showbiz-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -225,7 +210,6 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ EVENT -->
         <div class="tab-pane fade" id="pills-event">
           <div id="event-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -234,7 +218,6 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ NHÃN HÀNG -->
         <div class="tab-pane fade" id="pills-brand">
           <div id="brand-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -247,7 +230,51 @@
 
     <div id="dynamic-footer"></div>
 
-    <!-- MODAL HIỂN THỊ DEMO -->
+    <div
+      class="modal fade"
+      id="ugPricingModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0 shadow-lg rounded-4">
+          <div class="modal-header border-bottom-0 pb-0 pt-4 px-4">
+            <h5 class="modal-title fw-bold text-primary" id="ugModalTitle">
+              Bảng giá Underground
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body px-4 pb-4 pt-3">
+            <div class="table-responsive rounded-3 border">
+              <table class="table table-hover mb-0 ug-table">
+                <thead class="table-light text-center">
+                  <tr>
+                    <th class="py-3" style="width: 20%">Gói</th>
+                    <th class="py-3 text-start">Chi tiết dịch vụ</th>
+                    <th class="py-3" style="width: 25%">Đơn giá</th>
+                  </tr>
+                </thead>
+                <tbody id="ugModalBody"></tbody>
+              </table>
+            </div>
+            <div class="text-center mt-4">
+              <a
+                href="https://zalo.me/0344377104"
+                target="_blank"
+                class="btn btn-warning fw-bold px-5 py-2 rounded-pill shadow-sm"
+              >
+                <i class="bi bi-chat-text-fill me-2"></i>Booking Gói Này
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg rounded-4">
@@ -259,6 +286,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
+              aria-label="Close"
             ></button>
           </div>
           <div class="modal-body text-center pb-5">
@@ -283,7 +311,15 @@
     <script src="footer.js"></script>
 
     <script>
+      // Hàm hiển thị demo trong Modal bảng giá
       function updateDemo(title, desc) {
+        // Đóng Modal bảng giá hiện tại để mở Modal Demo
+        var ugModalEl = document.getElementById("ugPricingModal");
+        var ugModal = bootstrap.Modal.getInstance(ugModalEl);
+        if (ugModal) {
+          ugModal.hide();
+        }
+
         document.getElementById("demoTitle").innerText = "Tham Khảo " + title;
         document.getElementById("demoDesc").innerHTML =
           "Gói này bao gồm:<br><strong>" + desc + "</strong>";
@@ -292,20 +328,109 @@
       fetch("data.json")
         .then((response) => response.json())
         .then((data) => {
-          // 1. Render Bảng giá Underground (Giữ nguyên)
-          const ugBody = document.getElementById("ug-table-body");
+          // -------------------------------------------------------------
+          // 1. RENDER THẺ KÊNH CHO UNDERGROUND / INDIE
+          // -------------------------------------------------------------
+          const ugContainer = document.getElementById("ug-cards-container");
           let ugHtml = "";
-          data.pricing.underground.forEach((row, index) => {
-            const tiktokCell =
-              index === 0
-                ? `<td rowspan="${data.pricing.underground.length}" class="align-middle fw-bold tiktok-cell" style="font-size: 1.1rem; color: var(--price-color);">${data.pricing.tiktok_price_ug}</td>`
-                : "";
-            ugHtml += `<tr><td class="fw-bold bg-light">${row.code}</td><td class="text-start ps-4"><div class="small mb-2">${row.desc}</div><button class="btn btn-sm btn-outline-dark rounded-pill" data-bs-toggle="modal" data-bs-target="#demoModal" onclick="updateDemo('${row.code}', '${row.desc}')"><i class="bi bi-eye me-1"></i> Xem chi tiết</button></td><td class="fw-bold" style="font-size: 1.05rem;">${row.p1}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p2}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p3}</td><td class="fw-bold" style="font-size: 1.05rem;">${row.p4}</td>${tiktokCell}</tr>`;
-          });
-          ugBody.innerHTML = ugHtml;
+          const ugChannelsInfo = [
+            {
+              key: "p1",
+              channel: data.channels.grabfan.name,
+              sub: data.channels.grabfan.sub + " Followers",
+              img: data.channels.grabfan.img,
+            },
+            {
+              key: "p2",
+              channel: data.channels.thamthinh.name,
+              sub: data.channels.thamthinh.sub + " Followers",
+              img: data.channels.thamthinh.img,
+            },
+            {
+              key: "p4",
+              channel: data.channels.group.name,
+              sub: data.channels.group.sub + " Thành viên",
+              img: data.channels.group.img,
+            },
+            {
+              key: "p3",
+              channel: data.channels.nnr.name,
+              sub: data.channels.nnr.sub + " Followers",
+              img: data.channels.nnr.img,
+            },
+            {
+              key: "tiktok",
+              channel: data.channels.tiktok.name,
+              sub: data.channels.tiktok.sub + " Followers",
+              img: data.channels.tiktok.img,
+            },
+          ];
 
-          // HÀM Render Dạng Thẻ (Card)
-          // Fix: Sử dụng col-12 col-sm-6 col-lg-4 để ép các cột có chiều rộng bằng nhau
+          // Lưu data bảng giá vào biến toàn cục để dùng khi click mở Modal
+          window.undergroundData = data.pricing.underground;
+          window.tiktokPriceUg = data.pricing.tiktok_price_ug;
+
+          ugChannelsInfo.forEach((item) => {
+            ugHtml += `
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="openUgModal('${item.key}', '${item.channel}')">
+                  <img src="${item.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${item.channel}">
+                  <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${item.channel}</h6>
+                  <div class="mb-4">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 0.8rem;">
+                      <i class="bi bi-people-fill me-1"></i>${item.sub}
+                    </span>
+                  </div>
+                  <div class="mt-auto">
+                      <div class="text-muted small mb-3 fw-medium">Đa dạng gói Booking (1A - 5)</div>
+                      <button class="btn btn-outline-dark fw-bold rounded-pill w-100 shadow-sm">XEM BẢNG GIÁ</button>
+                  </div>
+                </div>
+              </div>`;
+          });
+          ugContainer.innerHTML = ugHtml;
+
+          // HÀM MỞ MODAL BẢNG GIÁ THEO KÊNH UNDERGROUND
+          window.openUgModal = function (key, channelName) {
+            document.getElementById("ugModalTitle").innerText =
+              "Bảng giá " + channelName;
+            let tbody = document.getElementById("ugModalBody");
+            let html = "";
+
+            if (key === "tiktok") {
+              html = `
+                  <tr>
+                      <td class="text-center fw-bold bg-light">TikTok Video</td>
+                      <td class="small">
+                        - Đăng 1 video lên kênh TikTok<br>
+                        - Gắn link nhạc / tag tài khoản
+                      </td>
+                      <td class="text-center fw-bold text-danger fs-5">${window.tiktokPriceUg}</td>
+                  </tr>`;
+            } else {
+              window.undergroundData.forEach((row) => {
+                html += `
+                      <tr>
+                          <td class="text-center fw-bold bg-light">
+                            ${row.code}<br>
+                            <button class="btn btn-demo mt-2" data-bs-toggle="modal" data-bs-target="#demoModal" onclick="updateDemo('${row.code}', '${row.desc}')"><i class="bi bi-eye"></i> Demo</button>
+                          </td>
+                          <td class="small text-start">${row.desc}</td>
+                          <td class="text-center fw-bold text-danger fs-5">${row[key]}</td>
+                      </tr>`;
+              });
+            }
+
+            tbody.innerHTML = html;
+            var ugModal = new bootstrap.Modal(
+              document.getElementById("ugPricingModal"),
+            );
+            ugModal.show();
+          };
+
+          // -------------------------------------------------------------
+          // 2. RENDER THẺ KÊNH CHO SHOWBIZ, EVENT, BRAND
+          // -------------------------------------------------------------
           function renderPricingCards(containerId, pricingData) {
             const container = document.getElementById(containerId);
             let html = '<div class="row justify-content-center g-4">';
@@ -332,7 +457,6 @@
             container.innerHTML = html;
           }
 
-          // 2. Render Cards cho Showbiz, Event, Brand
           renderPricingCards("showbiz-cards-container", data.pricing.showbiz);
           renderPricingCards("event-cards-container", data.pricing.event);
           renderPricingCards("brand-cards-container", data.pricing.brand);
