@@ -61,7 +61,7 @@
         transition: all 0.3s ease;
         border: 2px solid transparent;
         background-color: #fff;
-        cursor: pointer;
+        cursor: pointer; /* Biểu tượng bàn tay khi hover báo hiệu có thể click */
       }
       .pricing-card:hover {
         transform: translateY(-10px);
@@ -73,7 +73,6 @@
         font-size: 1.8rem;
       }
 
-      /* Style cho bảng trong Modal Underground */
       .ug-table td {
         vertical-align: middle;
       }
@@ -142,6 +141,7 @@
       </div>
     </section>
 
+    <!-- KHU VỰC BẢNG GIÁ -->
     <section id="danh-sach-bang-gia" class="container my-5 pt-4">
       <ul
         class="nav nav-pills justify-content-center mb-5 gap-2"
@@ -175,7 +175,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-event"
           >
-            Show diễn
+            Sự kiện
           </button>
         </li>
         <li class="nav-item">
@@ -191,6 +191,7 @@
       </ul>
 
       <div class="tab-content" id="pills-tabContent">
+        <!-- BẢNG GIÁ UNDERGROUND -->
         <div class="tab-pane fade show active" id="pills-undeground">
           <div
             id="ug-cards-container"
@@ -202,6 +203,7 @@
           </p>
         </div>
 
+        <!-- BẢNG GIÁ SHOWBIZ -->
         <div class="tab-pane fade" id="pills-showbiz">
           <div id="showbiz-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -210,6 +212,7 @@
           </p>
         </div>
 
+        <!-- BẢNG GIÁ EVENT -->
         <div class="tab-pane fade" id="pills-event">
           <div id="event-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -218,6 +221,7 @@
           </p>
         </div>
 
+        <!-- BẢNG GIÁ NHÃN HÀNG -->
         <div class="tab-pane fade" id="pills-brand">
           <div id="brand-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -230,6 +234,7 @@
 
     <div id="dynamic-footer"></div>
 
+    <!-- MODAL HIỂN THỊ BẢNG GIÁ UNDERGROUND THEO TỪNG KÊNH -->
     <div
       class="modal fade"
       id="ugPricingModal"
@@ -258,7 +263,9 @@
                     <th class="py-3" style="width: 25%">Đơn giá</th>
                   </tr>
                 </thead>
-                <tbody id="ugModalBody"></tbody>
+                <tbody id="ugModalBody">
+                  <!-- Javascript sẽ chèn nội dung vào đây -->
+                </tbody>
               </table>
             </div>
             <div class="text-center mt-4">
@@ -275,6 +282,7 @@
       </div>
     </div>
 
+    <!-- MODAL HIỂN THỊ DEMO ẢNH -->
     <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg rounded-4">
@@ -311,9 +319,7 @@
     <script src="footer.js"></script>
 
     <script>
-      // Hàm hiển thị demo trong Modal bảng giá
       function updateDemo(title, desc) {
-        // Đóng Modal bảng giá hiện tại để mở Modal Demo
         var ugModalEl = document.getElementById("ugPricingModal");
         var ugModal = bootstrap.Modal.getInstance(ugModalEl);
         if (ugModal) {
@@ -333,47 +339,53 @@
           // -------------------------------------------------------------
           const ugContainer = document.getElementById("ug-cards-container");
           let ugHtml = "";
+          // Tự động lấy link từ file json
           const ugChannelsInfo = [
             {
               key: "p1",
               channel: data.channels.grabfan.name,
               sub: data.channels.grabfan.sub + " Followers",
               img: data.channels.grabfan.img,
+              link: data.channels.grabfan.link,
             },
             {
               key: "p2",
               channel: data.channels.thamthinh.name,
               sub: data.channels.thamthinh.sub + " Followers",
               img: data.channels.thamthinh.img,
+              link: data.channels.thamthinh.link,
             },
             {
               key: "p4",
               channel: data.channels.group.name,
               sub: data.channels.group.sub + " Thành viên",
               img: data.channels.group.img,
+              link: data.channels.group.link,
             },
             {
               key: "p3",
               channel: data.channels.nnr.name,
               sub: data.channels.nnr.sub + " Followers",
               img: data.channels.nnr.img,
+              link: data.channels.nnr.link,
             },
             {
               key: "tiktok",
               channel: data.channels.tiktok.name,
               sub: data.channels.tiktok.sub + " Followers",
               img: data.channels.tiktok.img,
+              link: data.channels.tiktok.link,
             },
           ];
 
-          // Lưu data bảng giá vào biến toàn cục để dùng khi click mở Modal
           window.undergroundData = data.pricing.underground;
           window.tiktokPriceUg = data.pricing.tiktok_price_ug;
 
+          // Thêm hàm onclick mở link kênh vào div chính
           ugChannelsInfo.forEach((item) => {
             ugHtml += `
               <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="openUgModal('${item.key}', '${item.channel}')">
+                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="window.open('${item.link}', '_blank')">
                   <img src="${item.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${item.channel}">
                   <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${item.channel}</h6>
                   <div class="mb-4">
@@ -383,15 +395,16 @@
                   </div>
                   <div class="mt-auto">
                       <div class="text-muted small mb-3 fw-medium">Đa dạng gói Booking (1A - 5)</div>
-                      <button class="btn btn-outline-dark fw-bold rounded-pill w-100 shadow-sm">XEM BẢNG GIÁ</button>
+                      <!-- Dùng event.stopPropagation() để chặn mở link khi bấm nút này -->
+                      <button class="btn btn-outline-dark fw-bold rounded-pill w-100 shadow-sm" onclick="openUgModal(event, '${item.key}', '${item.channel}')">Xem Bảng Giá</button>
                   </div>
                 </div>
               </div>`;
           });
           ugContainer.innerHTML = ugHtml;
 
-          // HÀM MỞ MODAL BẢNG GIÁ THEO KÊNH UNDERGROUND
-          window.openUgModal = function (key, channelName) {
+          window.openUgModal = function (e, key, channelName) {
+            e.stopPropagation(); // Ngăn chặn thẻ card mở link sang page mới
             document.getElementById("ugModalTitle").innerText =
               "Bảng giá " + channelName;
             let tbody = document.getElementById("ugModalBody");
@@ -431,13 +444,23 @@
           // -------------------------------------------------------------
           // 2. RENDER THẺ KÊNH CHO SHOWBIZ, EVENT, BRAND
           // -------------------------------------------------------------
-          function renderPricingCards(containerId, pricingData) {
+          function renderPricingCards(containerId, pricingData, channelsData) {
             const container = document.getElementById(containerId);
             let html = '<div class="row justify-content-center g-4">';
+
+            // Hàm tìm link kênh từ data.channels
+            function getLink(name) {
+              for (let k in channelsData) {
+                if (channelsData[k].name === name) return channelsData[k].link;
+              }
+              return "#";
+            }
+
             pricingData.forEach((item) => {
+              let channelLink = getLink(item.channel);
               html += `
               <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card">
+                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="window.open('${channelLink}', '_blank')">
                   <img src="${item.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${item.channel}">
                   <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${item.channel}</h6>
                   <div class="mb-4">
@@ -448,7 +471,8 @@
                   <div class="mt-auto">
                       <div class="price-text fw-bold mb-0">${item.price}</div>
                       <div class="text-muted small mb-4 fw-medium">${item.unit}</div>
-                      <a href="https://zalo.me/0344377104" target="_blank" class="btn btn-dark fw-bold rounded-pill w-100 shadow-sm">Booking Ngay</a>
+                      <!-- Chặn chuyển hướng bằng event.stopPropagation() khi bấm Booking -->
+                      <a href="https://zalo.me/0344377104" target="_blank" onclick="event.stopPropagation()" class="btn btn-dark fw-bold rounded-pill w-100 shadow-sm">Booking Ngay</a>
                   </div>
                 </div>
               </div>`;
@@ -457,9 +481,21 @@
             container.innerHTML = html;
           }
 
-          renderPricingCards("showbiz-cards-container", data.pricing.showbiz);
-          renderPricingCards("event-cards-container", data.pricing.event);
-          renderPricingCards("brand-cards-container", data.pricing.brand);
+          renderPricingCards(
+            "showbiz-cards-container",
+            data.pricing.showbiz,
+            data.channels,
+          );
+          renderPricingCards(
+            "event-cards-container",
+            data.pricing.event,
+            data.channels,
+          );
+          renderPricingCards(
+            "brand-cards-container",
+            data.pricing.brand,
+            data.channels,
+          );
         })
         .catch((error) => console.error("Lỗi tải dữ liệu:", error));
     </script>
