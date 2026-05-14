@@ -91,88 +91,24 @@
       }
     ],
     "showbiz": [
-      {
-        "code": "Gói 1A",
-        "desc": "- 1 poster sản phẩm",
-        "p1": "300k",
-        "p2": "200k",
-        "p3": "30k",
-        "p4": "100k"
-      },
-      {
-        "code": "Gói 1B",
-        "desc": "- 1 video highlight",
-        "p1": "320k",
-        "p2": "220k",
-        "p3": "40k",
-        "p4": "120k"
-      },
-      {
-        "code": "Gói 1C",
-        "desc": "- Share link sản phẩm trực tiếp",
-        "p1": "300k",
-        "p2": "200k",
-        "p3": "30k",
-        "p4": "100k"
-      },
-      {
-        "code": "Gói 2",
-        "desc": "- 1 poster sản phẩm<br>- 1 video highlight",
-        "p1": "500k",
-        "p2": "350k",
-        "p3": "50k",
-        "p4": "180k"
-      },
-      {
-        "code": "Gói 3",
-        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
-        "p1": "700k",
-        "p2": "500k",
-        "p3": "60k",
-        "p4": "250k"
-      },
-      {
-        "code": "Gói 4",
-        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
-        "p1": "1000k",
-        "p2": "650k",
-        "p3": "100k",
-        "p4": "350k"
-      },
-      {
-        "code": "Gói 5",
-        "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
-        "p1": "1300k",
-        "p2": "800k",
-        "p3": "150k",
-        "p4": "500k"
-      }
+      { "channel": "Grab Fan Tháng 9", "price": "300k", "img": "assets/images/gft9.jpg" },
+      { "channel": "Rap Fan Thám Thính", "price": "200k", "img": "assets/images/rftt.jpg" },
+      { "channel": "Cộng đồng Grab Việt UG", "price": "150k", "img": "assets/images/cdgvu.png" },
+      { "channel": "Người Nghe Rap", "price": "50k", "img": "assets/images/nnr.jpg" }
     ],
     "event": [
-      {
-        "posts": "1 POST",
-        "p1": "300k",
-        "p2": "200k",
-        "p3": "20k",
-        "p4": "100k"
-      },
-      {
-        "posts": "2 POST",
-        "p1": "580k",
-        "p2": "350k",
-        "p3": "40k",
-        "p4": "180k"
-      },
-      {
-        "posts": "3 POST",
-        "p1": "850k",
-        "p2": "500k",
-        "p3": "60k",
-        "p4": "270k"
-      }
+      { "channel": "Grab Fan Tháng 9", "price": "300k", "img": "assets/images/gft9.jpg" },
+      { "channel": "Rap Fan Thám Thính", "price": "200k", "img": "assets/images/rftt.jpg" },
+      { "channel": "Cộng đồng Grab Việt UG", "price": "150k", "img": "assets/images/cdgvu.png" },
+      { "channel": "Người Nghe Rap", "price": "50k", "img": "assets/images/nnr.jpg" }
     ],
-    "tiktok_price_ug": "80K / Video",
-    "tiktok_price_showbiz": "200K / Video"
+    "brand": [
+      { "channel": "Grab Fan Tháng 9", "price": "600k", "img": "assets/images/gft9.jpg" },
+      { "channel": "Rap Fan Thám Thính", "price": "300k", "img": "assets/images/rftt.jpg" },
+      { "channel": "Cộng đồng Grab Việt UG", "price": "250k", "img": "assets/images/cdgvu.png" },
+      { "channel": "Người Nghe Rap", "price": "50k", "img": "assets/images/nnr.jpg" }
+    ],
+    "tiktok_price_ug": "80K / Video"
   },
   "clients": [
     {
@@ -206,10 +142,6 @@
     {
       "name": "Grab",
       "img": "https://seaoffers.seabank.com.vn/uploaded/MCC/grab.png"
-    },
-    {
-      "name": "Dirty Coins",
-      "img": "data:image/png;base64..."
     },
     {
       "name": "Sạp Show 5",
