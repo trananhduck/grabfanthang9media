@@ -56,7 +56,7 @@
         z-index: 0;
       }
 
-      /* CSS mới cho các thẻ giá (Pricing Cards) */
+      /* CSS cho các thẻ giá (Pricing Cards) */
       .pricing-card {
         transition: all 0.3s ease;
         border: 2px solid transparent;
@@ -69,7 +69,7 @@
       }
       .price-text {
         color: var(--schedio-blue-dark);
-        font-size: 2.2rem;
+        font-size: 1.8rem;
       }
     </style>
   </head>
@@ -138,7 +138,6 @@
 
     <!-- KHU VỰC BẢNG GIÁ -->
     <section id="danh-sach-bang-gia" class="container my-5 pt-4">
-      <!-- Cập nhật thêm Tab Nhãn Hàng -->
       <ul
         class="nav nav-pills justify-content-center mb-5 gap-2"
         id="pills-tab"
@@ -187,7 +186,7 @@
       </ul>
 
       <div class="tab-content" id="pills-tabContent">
-        <!-- BẢNG GIÁ UNDERGROUND (Giữ nguyên dạng bảng) -->
+        <!-- BẢNG GIÁ UNDERGROUND -->
         <div class="tab-pane fade show active" id="pills-undeground">
           <div class="table-responsive shadow-lg rounded-4 bg-white">
             <table class="table table-bordered mb-0 align-middle text-center">
@@ -217,7 +216,7 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ SHOWBIZ (Dạng Thẻ) -->
+        <!-- BẢNG GIÁ SHOWBIZ -->
         <div class="tab-pane fade" id="pills-showbiz">
           <div id="showbiz-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -226,7 +225,7 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ EVENT (Dạng Thẻ) -->
+        <!-- BẢNG GIÁ EVENT -->
         <div class="tab-pane fade" id="pills-event">
           <div id="event-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -235,7 +234,7 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ NHÃN HÀNG (Dạng Thẻ) -->
+        <!-- BẢNG GIÁ NHÃN HÀNG -->
         <div class="tab-pane fade" id="pills-brand">
           <div id="brand-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -248,7 +247,7 @@
 
     <div id="dynamic-footer"></div>
 
-    <!-- MODAL HIỂN THỊ DEMO GÓI UNDERGROUND -->
+    <!-- MODAL HIỂN THỊ DEMO -->
     <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg rounded-4">
@@ -305,20 +304,25 @@
           });
           ugBody.innerHTML = ugHtml;
 
-          // HÀM Render Dạng Thẻ (Card) cho Showbiz, Event, Brand
+          // HÀM Render Dạng Thẻ (Card)
           function renderPricingCards(containerId, pricingData) {
             const container = document.getElementById(containerId);
-            let html = '<div class="row justify-content-center g-4">';
+            let html = '<div class="row justify-content-center g-3">';
             pricingData.forEach((item) => {
               html += `
-              <div class="col-sm-6 col-lg-3">
-                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card">
-                  <img src="${item.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${item.channel}">
-                  <h6 class="fw-bold mb-3 text-secondary" style="min-height: 40px;">${item.channel}</h6>
+              <div class="col-sm-6 col-md-4 col-lg flex-fill">
+                <div class="card h-100 shadow-sm rounded-4 text-center p-3 pricing-card">
+                  <img src="${item.img}" class="rounded-circle mx-auto mb-2 shadow-sm border border-2 border-warning" width="70" height="70" style="object-fit: cover;" alt="${item.channel}">
+                  <h6 class="fw-bold mb-2 text-dark" style="font-size: 0.95rem; min-height: 40px;">${item.channel}</h6>
+                  <div class="mb-3">
+                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 0.75rem;">
+                      <i class="bi bi-people-fill me-1"></i>${item.sub}
+                    </span>
+                  </div>
                   <div class="mt-auto">
                       <div class="price-text fw-bold mb-0">${item.price}</div>
-                      <div class="text-muted small mb-4">/ Bài đăng (Post)</div>
-                      <a href="https://zalo.me/0344377104" target="_blank" class="btn btn-dark fw-bold rounded-pill w-100">Booking Ngay</a>
+                      <div class="text-muted small mb-3 fw-medium">${item.unit}</div>
+                      <a href="https://zalo.me/0344377104" target="_blank" class="btn btn-dark btn-sm fw-bold rounded-pill w-100 shadow-sm">Booking Ngay</a>
                   </div>
                 </div>
               </div>`;
@@ -327,13 +331,9 @@
             container.innerHTML = html;
           }
 
-          // 2. Render Cards cho Showbiz
+          // 2. Render Cards cho Showbiz, Event, Brand
           renderPricingCards("showbiz-cards-container", data.pricing.showbiz);
-
-          // 3. Render Cards cho Event
           renderPricingCards("event-cards-container", data.pricing.event);
-
-          // 4. Render Cards cho Brand
           renderPricingCards("brand-cards-container", data.pricing.brand);
         })
         .catch((error) => console.error("Lỗi tải dữ liệu:", error));

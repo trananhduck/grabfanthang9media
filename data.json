@@ -91,22 +91,25 @@
       }
     ],
     "showbiz": [
-      { "channel": "Grab Fan Tháng 9", "price": "300k", "img": "assets/images/gft9.jpg" },
-      { "channel": "Rap Fan Thám Thính", "price": "200k", "img": "assets/images/rftt.jpg" },
-      { "channel": "Cộng đồng Grab Việt UG", "price": "150k", "img": "assets/images/cdgvu.png" },
-      { "channel": "Người Nghe Rap", "price": "50k", "img": "assets/images/nnr.jpg" }
+      { "channel": "Grab Fan Tháng 9", "price": "300k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
+      { "channel": "Rap Fan Thám Thính", "price": "200k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
+      { "channel": "Cộng đồng Grab Việt UG", "price": "150k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
+      { "channel": "Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
+      { "channel": "TikTok Grab Fan Tháng 9", "price": "200k", "unit": "/ Video", "sub": "4.3K Followers", "img": "assets/images/gft9.jpg" }
     ],
     "event": [
-      { "channel": "Grab Fan Tháng 9", "price": "300k", "img": "assets/images/gft9.jpg" },
-      { "channel": "Rap Fan Thám Thính", "price": "200k", "img": "assets/images/rftt.jpg" },
-      { "channel": "Cộng đồng Grab Việt UG", "price": "150k", "img": "assets/images/cdgvu.png" },
-      { "channel": "Người Nghe Rap", "price": "50k", "img": "assets/images/nnr.jpg" }
+      { "channel": "Grab Fan Tháng 9", "price": "300k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
+      { "channel": "Rap Fan Thám Thính", "price": "200k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
+      { "channel": "Cộng đồng Grab Việt UG", "price": "150k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
+      { "channel": "Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
+      { "channel": "TikTok Grab Fan Tháng 9", "price": "200k", "unit": "/ Video", "sub": "4.3K Followers", "img": "assets/images/gft9.jpg" }
     ],
     "brand": [
-      { "channel": "Grab Fan Tháng 9", "price": "600k", "img": "assets/images/gft9.jpg" },
-      { "channel": "Rap Fan Thám Thính", "price": "300k", "img": "assets/images/rftt.jpg" },
-      { "channel": "Cộng đồng Grab Việt UG", "price": "250k", "img": "assets/images/cdgvu.png" },
-      { "channel": "Người Nghe Rap", "price": "50k", "img": "assets/images/nnr.jpg" }
+      { "channel": "Grab Fan Tháng 9", "price": "600k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
+      { "channel": "Rap Fan Thám Thính", "price": "300k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
+      { "channel": "Cộng đồng Grab Việt UG", "price": "250k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
+      { "channel": "Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
+      { "channel": "TikTok Grab Fan Tháng 9", "price": "200k", "unit": "/ Video", "sub": "4.3K Followers", "img": "assets/images/gft9.jpg" }
     ],
     "tiktok_price_ug": "80K / Video"
   },
@@ -142,6 +145,10 @@
     {
       "name": "Grab",
       "img": "https://seaoffers.seabank.com.vn/uploaded/MCC/grab.png"
+    },
+    {
+      "name": "Dirty Coins",
+      "img": "data:image/png;base64..."
     },
     {
       "name": "Sạp Show 5",
