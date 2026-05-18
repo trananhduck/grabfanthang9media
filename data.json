@@ -44,7 +44,7 @@
       {
         "code": "Gói 1B",
         "desc": "- 1 video highlight",
-        "p1": "250k",
+        "p1": "270k",
         "p2": "180k",
         "p3": "20k",
         "p4": "120k"
@@ -91,7 +91,7 @@
       }
     ],
     "showbiz": [
-      { "channel": "Fanpage Grab Fan Tháng 9", "price": "300k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
+      { "channel": "Fanpage Grab Fan Tháng 9", "price": "400k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
       { "channel": "Fanpage Rap Fan Thám Thính", "price": "200k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
       { "channel": "Cộng đồng Grab Việt Uunderground", "price": "150k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
       { "channel": "Fanpage Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
