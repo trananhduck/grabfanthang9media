@@ -61,7 +61,7 @@
         transition: all 0.3s ease;
         border: 2px solid transparent;
         background-color: #fff;
-        cursor: pointer; /* Biểu tượng bàn tay khi hover báo hiệu có thể click */
+        cursor: pointer;
       }
       .pricing-card:hover {
         transform: translateY(-10px);
@@ -141,7 +141,6 @@
       </div>
     </section>
 
-    <!-- KHU VỰC BẢNG GIÁ -->
     <section id="danh-sach-bang-gia" class="container my-5 pt-4">
       <ul
         class="nav nav-pills justify-content-center mb-5 gap-2"
@@ -175,7 +174,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-event"
           >
-            Sự kiện
+            Sự kiện / Show diễn
           </button>
         </li>
         <li class="nav-item">
@@ -185,13 +184,12 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-brand"
           >
-            Brands
+            Nhãn hàng / Brands
           </button>
         </li>
       </ul>
 
       <div class="tab-content" id="pills-tabContent">
-        <!-- BẢNG GIÁ UNDERGROUND -->
         <div class="tab-pane fade show active" id="pills-undeground">
           <div
             id="ug-cards-container"
@@ -203,7 +201,6 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ SHOWBIZ -->
         <div class="tab-pane fade" id="pills-showbiz">
           <div id="showbiz-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -212,7 +209,6 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ EVENT -->
         <div class="tab-pane fade" id="pills-event">
           <div id="event-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -221,7 +217,6 @@
           </p>
         </div>
 
-        <!-- BẢNG GIÁ NHÃN HÀNG -->
         <div class="tab-pane fade" id="pills-brand">
           <div id="brand-cards-container"></div>
           <p class="text-danger small fst-italic mt-4 text-center">
@@ -234,7 +229,6 @@
 
     <div id="dynamic-footer"></div>
 
-    <!-- MODAL HIỂN THỊ BẢNG GIÁ UNDERGROUND THEO TỪNG KÊNH -->
     <div
       class="modal fade"
       id="ugPricingModal"
@@ -263,9 +257,7 @@
                     <th class="py-3" style="width: 25%">Đơn giá</th>
                   </tr>
                 </thead>
-                <tbody id="ugModalBody">
-                  <!-- Javascript sẽ chèn nội dung vào đây -->
-                </tbody>
+                <tbody id="ugModalBody"></tbody>
               </table>
             </div>
             <div class="text-center mt-4">
@@ -282,7 +274,6 @@
       </div>
     </div>
 
-    <!-- MODAL HIỂN THỊ DEMO ẢNH -->
     <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow-lg rounded-4">
@@ -339,7 +330,8 @@
           // -------------------------------------------------------------
           const ugContainer = document.getElementById("ug-cards-container");
           let ugHtml = "";
-          // Tự động lấy link từ file json
+
+          // Trích xuất tự động thông tin kênh từ file JSON
           const ugChannelsInfo = [
             {
               key: "p1",
@@ -381,7 +373,6 @@
           window.undergroundData = data.pricing.underground;
           window.tiktokPriceUg = data.pricing.tiktok_price_ug;
 
-          // Thêm hàm onclick mở link kênh vào div chính
           ugChannelsInfo.forEach((item) => {
             ugHtml += `
               <div class="col-12 col-sm-6 col-lg-4">
@@ -395,7 +386,6 @@
                   </div>
                   <div class="mt-auto">
                       <div class="text-muted small mb-3 fw-medium">Đa dạng gói Booking (1A - 5)</div>
-                      <!-- Dùng event.stopPropagation() để chặn mở link khi bấm nút này -->
                       <button class="btn btn-outline-dark fw-bold rounded-pill w-100 shadow-sm" onclick="openUgModal(event, '${item.key}', '${item.channel}')">XEM BẢNG GIÁ</button>
                   </div>
                 </div>
@@ -404,7 +394,7 @@
           ugContainer.innerHTML = ugHtml;
 
           window.openUgModal = function (e, key, channelName) {
-            e.stopPropagation(); // Ngăn chặn thẻ card mở link sang page mới
+            e.stopPropagation(); // Ngăn chặn nhảy link khi bấm nút Xem Bảng Giá
             document.getElementById("ugModalTitle").innerText =
               "Bảng giá " + channelName;
             let tbody = document.getElementById("ugModalBody");
@@ -448,30 +438,27 @@
             const container = document.getElementById(containerId);
             let html = '<div class="row justify-content-center g-4">';
 
-            // Hàm tìm link kênh từ data.channels
-            function getLink(name) {
-              for (let k in channelsData) {
-                if (channelsData[k].name === name) return channelsData[k].link;
-              }
-              return "#";
-            }
-
             pricingData.forEach((item) => {
-              let channelLink = getLink(item.channel);
+              // Lấy thông tin kênh từ key trong phần channels
+              let channelInfo = channelsData[item.key];
+
+              // Xử lý text phụ (sub) cho chuẩn
+              let suffixText =
+                item.key === "group" ? " Thành viên" : " Followers";
+
               html += `
               <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="window.open('${channelLink}', '_blank')">
-                  <img src="${item.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${item.channel}">
-                  <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${item.channel}</h6>
+                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="window.open('${channelInfo.link}', '_blank')">
+                  <img src="${channelInfo.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${channelInfo.name}">
+                  <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${channelInfo.name}</h6>
                   <div class="mb-4">
                     <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 0.8rem;">
-                      <i class="bi bi-people-fill me-1"></i>${item.sub}
+                      <i class="bi bi-people-fill me-1"></i>${channelInfo.sub}${suffixText}
                     </span>
                   </div>
                   <div class="mt-auto">
                       <div class="price-text fw-bold mb-0">${item.price}</div>
                       <div class="text-muted small mb-4 fw-medium">${item.unit}</div>
-                      <!-- Chặn chuyển hướng bằng event.stopPropagation() khi bấm Booking -->
                       <a href="https://zalo.me/0344377104" target="_blank" onclick="event.stopPropagation()" class="btn btn-dark fw-bold rounded-pill w-100 shadow-sm">Booking Ngay</a>
                   </div>
                 </div>
@@ -481,6 +468,7 @@
             container.innerHTML = html;
           }
 
+          // Render các nhóm
           renderPricingCards(
             "showbiz-cards-container",
             data.pricing.showbiz,

@@ -91,25 +91,25 @@
       }
     ],
     "showbiz": [
-      { "channel": "Fanpage Grab Fan Tháng 9", "price": "350k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
-      { "channel": "Fanpage Rap Fan Thám Thính", "price": "200k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
-      { "channel": "Cộng đồng Grab Việt Uunderground", "price": "150k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
-      { "channel": "Fanpage Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
-      { "channel": "TikTok Grab Fan Tháng 9", "price": "200k", "unit": "/ Video", "sub": "4.3K Followers", "img": "assets/images/gft9.jpg" }
+      { "key": "grabfan", "price": "350k", "unit": "/ Post" },
+      { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
+      { "key": "group", "price": "150k", "unit": "/ Post" },
+      { "key": "nnr", "price": "50k", "unit": "/ Post" },
+      { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
     "event": [
-      { "channel": "Fanpage Grab Fan Tháng 9", "price": "400k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
-      { "channel": "Fanpage Rap Fan Thám Thính", "price": "200k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
-      { "channel": "Cộng đồng Grab Việt Uunderground", "price": "150k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
-      { "channel": "Fanpage Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
-      { "channel": "TikTok Grab Fan Tháng 9", "price": "200k", "unit": "/ Video", "sub": "4.3K Followers", "img": "assets/images/gft9.jpg" }
+      { "key": "grabfan", "price": "400k", "unit": "/ Post" },
+      { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
+      { "key": "group", "price": "150k", "unit": "/ Post" },
+      { "key": "nnr", "price": "50k", "unit": "/ Post" },
+      { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
     "brand": [
-      { "channel": "Fanpage Grab Fan Tháng 9", "price": "600k", "unit": "/ Post", "sub": "109K Followers", "img": "assets/images/gft9.jpg" },
-      { "channel": "Fanpage Rap Fan Thám Thính", "price": "300k", "unit": "/ Post", "sub": "37K Followers", "img": "assets/images/rftt.jpg" },
-      { "channel": "Cộng đồng Grab Việt Uunderground", "price": "250k", "unit": "/ Post", "sub": "16.5K Thành viên", "img": "assets/images/cdgvu.png" },
-      { "channel": "Fanpage Người Nghe Rap", "price": "50k", "unit": "/ Post", "sub": "4.4K Followers", "img": "assets/images/nnr.jpg" },
-      { "channel": "TikTok Grab Fan Tháng 9", "price": "200k", "unit": "/ Video", "sub": "4.3K Followers", "img": "assets/images/gft9.jpg" }
+      { "key": "grabfan", "price": "600k", "unit": "/ Post" },
+      { "key": "thamthinh", "price": "300k", "unit": "/ Post" },
+      { "key": "group", "price": "250k", "unit": "/ Post" },
+      { "key": "nnr", "price": "50k", "unit": "/ Post" },
+      { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
     "tiktok_price_ug": "80K / Video"
   },
