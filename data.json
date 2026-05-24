@@ -52,7 +52,7 @@
       {
         "code": "Gói 1C",
         "desc": "- Share link sản phẩm trực tiếp",
-        "p1": "200k",
+        "p1": "250k",
         "p2": "150k",
         "p3": "20k",
         "p4": "100k"
@@ -60,7 +60,7 @@
       {
         "code": "Gói 2",
         "desc": "- 1 poster sản phẩm<br>- 1 video highlight",
-        "p1": "380k",
+        "p1": "450k",
         "p2": "300k",
         "p3": "40k",
         "p4": "180k"
@@ -68,7 +68,7 @@
       {
         "code": "Gói 3",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
-        "p1": "550k",
+        "p1": "600k",
         "p2": "400k",
         "p3": "50k",
         "p4": "250k"
@@ -76,7 +76,7 @@
       {
         "code": "Gói 4",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
-        "p1": "800k",
+        "p1": "1000k",
         "p2": "600k",
         "p3": "120k",
         "p4": "350k"
@@ -84,7 +84,7 @@
       {
         "code": "Gói 5",
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
-        "p1": "1100k",
+        "p1": "1200k",
         "p2": "800k",
         "p3": "180k",
         "p4": "500k"
