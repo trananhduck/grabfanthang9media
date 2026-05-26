@@ -127,6 +127,10 @@
       "img": "https://vcdn1-giaitri.vnecdn.net/2025/12/15/Rapper-Karik-tai-Anh-trai-say-hi-mua-thu-hai-42-1765776087.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=04ojIqJPo4-FxREX2RRXiw&view=origin"
     },
     {
+      "name": "MMusic",
+      "img": "./assets/images/mmusic.jpg"
+    },
+    {
       "name": "Kimmese",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTf8LCNDUPga_RziHF8NlB1bQlB26TO3--mQ&s"
     },
@@ -145,6 +149,10 @@
     {
       "name": "Grab",
       "img": "https://seaoffers.seabank.com.vn/uploaded/MCC/grab.png"
+    },
+    {
+      "name": "Sprite",
+      "img": "https://images.seeklogo.com/logo-png/31/1/sprite-logo-png_seeklogo-317797.png"
     },
     {
       "name": "Dirty Coins",
