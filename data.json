@@ -38,7 +38,7 @@
         "desc": "- 1 poster sản phẩm",
         "p1": "250k",
         "p2": "150k",
-        "p3": "20k",
+        "p3": "50k",
         "p4": "100k"
       },
       {
@@ -46,7 +46,7 @@
         "desc": "- 1 video highlight",
         "p1": "270k",
         "p2": "180k",
-        "p3": "20k",
+        "p3": "50k",
         "p4": "120k"
       },
       {
@@ -54,7 +54,7 @@
         "desc": "- Share link sản phẩm trực tiếp",
         "p1": "250k",
         "p2": "150k",
-        "p3": "20k",
+        "p3": "50k",
         "p4": "100k"
       },
       {
@@ -62,7 +62,7 @@
         "desc": "- 1 poster sản phẩm<br>- 1 video highlight",
         "p1": "450k",
         "p2": "300k",
-        "p3": "40k",
+        "p3": "90k",
         "p4": "180k"
       },
       {
@@ -70,7 +70,7 @@
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight",
         "p1": "600k",
         "p2": "400k",
-        "p3": "50k",
+        "p3": "100k",
         "p4": "250k"
       },
       {
@@ -78,7 +78,7 @@
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br><span class='text-danger fw-bold'>- 1 tuần ghim bài đăng trên page</span>",
         "p1": "1000k",
         "p2": "600k",
-        "p3": "120k",
+        "p3": "150k",
         "p4": "350k"
       },
       {
@@ -86,32 +86,32 @@
         "desc": "- 1 poster sản phẩm<br>- 1 post trích lyrics highlight<br>- 1 video highlight<br>- 1 post bình luận về sản phẩm<br>- 2 bài đăng về tin tức/meme xoay quanh sản phẩm<br><span class='text-danger fw-bold'>- 2 tuần ghim bài đăng trên page<br>- Đặt poster làm ảnh bìa 1 tuần</span>",
         "p1": "1200k",
         "p2": "800k",
-        "p3": "180k",
+        "p3": "250k",
         "p4": "500k"
       }
     ],
     "showbiz": [
       { "key": "grabfan", "price": "350k", "unit": "/ Post" },
       { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
-      { "key": "group", "price": "150k", "unit": "/ Post" },
-      { "key": "nnr", "price": "50k", "unit": "/ Post" },
+      { "key": "group", "price": "200k", "unit": "/ Post" },
+      { "key": "nnr", "price": "100k", "unit": "/ Post" },
       { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
     "event": [
       { "key": "grabfan", "price": "400k", "unit": "/ Post" },
       { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
-      { "key": "group", "price": "150k", "unit": "/ Post" },
-      { "key": "nnr", "price": "50k", "unit": "/ Post" },
+      { "key": "group", "price": "200k", "unit": "/ Post" },
+      { "key": "nnr", "price": "100k", "unit": "/ Post" },
       { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
     "brand": [
-      { "key": "grabfan", "price": "600k", "unit": "/ Post" },
+      { "key": "grabfan", "price": "800k", "unit": "/ Post" },
       { "key": "thamthinh", "price": "300k", "unit": "/ Post" },
       { "key": "group", "price": "250k", "unit": "/ Post" },
-      { "key": "nnr", "price": "50k", "unit": "/ Post" },
+      { "key": "nnr", "price": "100k", "unit": "/ Post" },
       { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
-    "tiktok_price_ug": "80K / Video"
+    "tiktok_price_ug": "100K / Video"
   },
   "clients": [
     {
