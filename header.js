@@ -59,21 +59,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 <li><a class="dropdown-item py-2 ${currentPath === "mix-master.html" ? "active fw-bold" : ""}" href="${prefix}production/mix-master.html"><i class="bi bi-sliders text-warning me-2"></i>Mix / Master chuyên nghiệp</a></li>
               </ul>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link fw-bold text-nowrap ${currentPath === "vcl-studio.html" ? "active" : ""}" href="${prefix}vcl-studio.html">VCL Studios</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "blog.html" || window.location.pathname.includes('/blog/') ? "active" : ""}" href="${prefix}blog.html">Bài viết</a>
             </li>
-
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "clients.html" ? "active" : ""}" href="${prefix}clients.html">Khách hàng tiêu biểu</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "projects.html" ? "active" : ""}" href="${prefix}projects.html">Dự án nổi bật</a>
-            </li>
-
-            
-            <li class="nav-item">
-              <a class="nav-link fw-bold text-nowrap ${currentPath === "donate.html" ? "active" : ""}" href="${prefix}donate.html">Donate</a>
             </li>
           </ul>
         </div>

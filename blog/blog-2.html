@@ -208,6 +208,101 @@
 
           <hr class="my-5 opacity-25" />
 
+          <!-- KHU VỰC DONATE / ỦNG HỘ TÁC GIẢ -->
+          <div
+            class="card border-0 rounded-4 p-4 text-center my-5"
+            style="
+              background-color: #f8f9fa;
+              border: 2px dashed #dee2e6 !important;
+            "
+          >
+            <div class="card-body p-0">
+              <div class="mb-3">
+                <i class="bi bi-cup-hot-fill text-warning fs-1"></i>
+              </div>
+              <h4 class="fw-bold mb-3" style="color: var(--schedio-blue-dark)">
+                Tiếp thêm động lực cho Admin!
+              </h4>
+              <p class="text-muted small mb-4 mx-auto" style="max-width: 600px">
+                Nếu bạn thấy bài viết thú vị, hãy mời team một ly cà phê nhé. Sự
+                ủng hộ của bạn là động lực rất lớn để GFT9 Media tiếp tục ra mắt
+                các nội dung chất lượng!
+              </p>
+
+              <!-- KHỐI THÔNG TIN GỘP CHUNG CHUYÊN NGHIỆP -->
+              <div
+                class="bg-white rounded-4 shadow-sm p-4 mx-auto border"
+                style="max-width: 650px"
+              >
+                <div class="row align-items-center justify-content-center g-4">
+                  <!-- Cột QR Code (Đã tăng size) -->
+                  <div class="col-sm-5 col-md-5 text-center">
+                    <img
+                      src="../assets/images/qr-donate.jpg"
+                      alt="QR Donate Vietcombank"
+                      class="img-fluid rounded-3 border p-1 mb-2"
+                      style="max-width: 220px; width: 100%; object-fit: contain"
+                    />
+                    <div class="small fw-bold text-muted mt-1">
+                      <i class="bi bi-qr-code-scan me-1"></i>Quét mã QR
+                    </div>
+                  </div>
+
+                  <!-- Cột Thông tin -->
+                  <div
+                    class="col-sm-7 col-md-7 text-start"
+                    style="border-left: 1px solid #f1f3f5"
+                  >
+                    <div class="ps-md-2">
+                      <div class="mb-3">
+                        <span class="text-muted small d-block mb-1"
+                          >Ngân hàng</span
+                        >
+                        <span
+                          class="badge bg-dark text-warning px-3 py-2 fs-6 rounded-pill"
+                          >VIETCOMBANK</span
+                        >
+                      </div>
+
+                      <div class="mb-3">
+                        <span class="text-muted small d-block mb-1"
+                          >Chủ tài khoản</span
+                        >
+                        <strong class="text-uppercase text-dark fs-5"
+                          >TRAN ANH DUC</strong
+                        >
+                      </div>
+
+                      <div class="mb-1">
+                        <span class="text-muted small d-block mb-1"
+                          >Số tài khoản</span
+                        >
+                        <div class="d-flex align-items-center gap-2 flex-wrap">
+                          <strong class="text-primary fs-4 mb-0"
+                            >1040314067</strong
+                          >
+                          <!-- Nút Copy gọi hàm JS -->
+                          <button
+                            class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold"
+                            onclick="copySTK(this)"
+                          >
+                            <i class="bi bi-clipboard me-1"></i> Copy
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <small class="text-muted fst-italic">
+                  <i class="bi bi-info-circle-fill me-1"></i>Đừng quên ghi chú
+                  kèm theo Rapname hoặc lời nhắn của bạn nha!
+                </small>
+              </div>
+            </div>
+          </div>
           <div class="d-flex justify-content-between align-items-center">
             <a
               href="../blog.html"
@@ -234,5 +329,38 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../header.js"></script>
     <script src="../footer.js"></script>
+
+    <!-- SCRIPT XỬ LÝ NÚT COPY -->
+    <script>
+      function copySTK(btn) {
+        navigator.clipboard
+          .writeText("1040314067")
+          .then(() => {
+            let originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="bi bi-check2 me-1"></i> Đã Copy';
+            btn.classList.replace("btn-outline-secondary", "btn-success");
+            btn.classList.add("text-white");
+
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+              btn.classList.replace("btn-success", "btn-outline-secondary");
+              btn.classList.remove("text-white");
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Không thể copy", err);
+          });
+      }
+    </script>
+
+    <!-- ĐOẠN CODE VERCEL WEB ANALYTICS -->
+    <script>
+      window.va =
+        window.va ||
+        function () {
+          (window.vaq = window.vaq || []).push(arguments);
+        };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
   </body>
 </html>

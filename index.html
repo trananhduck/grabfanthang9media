@@ -26,7 +26,7 @@
         border-radius: 12px;
         overflow: hidden;
         background: #fff;
-        max-width: 800px; /* Giới hạn chiều rộng để băng chuyền nhìn gọn gàng */
+        max-width: 800px;
         margin: 0 auto;
       }
       .blog-carousel-img {
@@ -39,12 +39,40 @@
       .carousel-control-next-icon {
         filter: invert(100%);
       }
+
+      /* Style cho Banner Đối tác VCL Studios */
+      .vcl-banner-card {
+        background: linear-gradient(
+          135deg,
+          var(--schedio-blue-dark, #0f172a) 0%,
+          #1e293b 100%
+        );
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .vcl-banner-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+      }
+      .vcl-banner-img {
+        transition: transform 0.4s ease;
+        transform: rotate(
+          -3deg
+        ); /* Đổi chiều xoay cho phù hợp khi ở bên trái */
+      }
+      .vcl-banner-card:hover .vcl-banner-img {
+        transform: rotate(0deg) scale(1.05);
+      }
     </style>
   </head>
   <body>
     <div id="dynamic-header"></div>
 
-    <section class="container my-5 py-5">
+    <!-- KHU VỰC HERO GFT9 MEDIA -->
+    <section class="container my-5 pt-5 pb-4">
       <div class="row align-items-center">
         <div class="col-md-6 order-2 order-md-1">
           <span class="badge bg-dark text-warning mb-3 px-3 py-2"
@@ -125,6 +153,60 @@
       </div>
     </section>
 
+    <!-- KHU VỰC ĐỐI TÁC VCL STUDIOS (ẢNH TRÁI - TEXT PHẢI) -->
+    <section class="container mb-5 pb-3">
+      <div
+        class="card rounded-4 overflow-hidden shadow vcl-banner-card text-white"
+        onclick="window.location.href = 'vcl-studio.html'"
+      >
+        <div class="row g-0 align-items-center">
+          <!-- Cột Hình Ảnh (Bên Trái) -->
+          <div
+            class="col-md-4 text-center p-4 p-md-0 ps-md-5 d-none d-md-block"
+          >
+            <!-- Bạn nhớ check lại tên file ảnh VCL ở dòng này nhé -->
+            <img
+              src="assets/images/vcl-studio.png"
+              alt="VCL Studios"
+              class="img-fluid rounded-4 shadow border border-2 border-warning vcl-banner-img"
+              style="max-width: 250px; aspect-ratio: 1/1; object-fit: cover"
+            />
+          </div>
+
+          <!-- Cột Nội Dung Text (Bên Phải) -->
+          <div class="col-md-8 p-4 p-md-5 text-md-start">
+            <span
+              class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill fw-bold"
+              >ĐỐI TÁC CHIẾN LƯỢC</span
+            >
+            <h2 class="display-6 fw-bold mb-2">
+              VCL STUDIOS <span class="text-warning">x</span> GFT9
+            </h2>
+            <h5 class="fw-medium mb-3 text-light opacity-75">
+              Đồng hành âm nhạc, giữ trọn chất riêng
+            </h5>
+            <p
+              class="text-light opacity-75 mb-4 pe-md-4"
+              style="text-align: justify; font-size: 1.05rem"
+            >
+              VCL Studios - Phòng thu âm và sản xuất nội dung video chuyên
+              nghiệp cho nghệ sĩ. Đứng sau các bản hit Top 50 Spotify và 5M+
+              stream TikTok. Với đội ngũ Producer 10 năm kinh nghiệm, từng hợp
+              tác cùng 24K.Right, Sol7, Hydra, gung0cay... chúng tôi tự tin mang
+              đến các giải pháp từ Beat độc quyền, Mix & Master đến Content
+              Viral.
+            </p>
+            <button
+              class="btn btn-warning fw-bold px-4 py-2 rounded-pill text-dark shadow-sm"
+            >
+              Khám phá dịch vụ VCL <i class="bi bi-arrow-right ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KHU VỰC HỆ THỐNG KÊNH -->
     <section class="bg-light py-5">
       <div class="container">
         <div class="text-center mb-5">
@@ -320,6 +402,7 @@
       </div>
     </section>
 
+    <!-- CAROUSEL BLOG -->
     <section class="container my-5 py-4">
       <div class="d-flex justify-content-between align-items-end mb-4">
         <div>

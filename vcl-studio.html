@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCL Studios x Grab Fan Tháng 9 - Đối tác âm nhạc</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <style>
+      .vcl-hero {
+        background:
+          linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)),
+          url("https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop")
+            center/cover no-repeat;
+        position: relative;
+        overflow: hidden;
+      }
+      .service-card {
+        transition: all 0.3s ease;
+        border: none;
+        border-radius: 16px;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+      }
+      .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      .contact-box {
+        background-color: var(--schedio-blue-dark);
+        color: white;
+        border-radius: 16px;
+        padding: 3rem 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- VỊ TRÍ CHÈN HEADER -->
+    <div id="dynamic-header"></div>
+
+    <!-- HERO SECTION (Đã chỉnh sửa bố cục 2 cột) -->
+    <section class="vcl-hero py-5 text-white">
+      <div class="container py-5 mt-4">
+        <div class="row align-items-center g-5">
+          <!-- Cột Nội Dung (Bên trái) -->
+          <div class="col-lg-7 text-center text-lg-start">
+            <div class="d-inline-flex align-items-center gap-3 mb-4">
+              <span
+                class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold fs-6"
+                >ĐỐI TÁC CHIẾN LƯỢC</span
+              >
+            </div>
+            <h1 class="display-3 fw-bold mb-3">
+              VCL STUDIOS <span class="text-warning">x</span> GFT9
+            </h1>
+            <h3 class="fw-normal mb-4 text-light opacity-75">
+              Đồng hành âm nhạc, giữ trọn chất riêng
+            </h3>
+            <p
+              class="lead opacity-90 mb-5"
+              style="text-align: justify; text-justify: inter-word"
+            >
+              <strong>VCL Studios</strong> là phòng thu âm và sản xuất nội dung
+              video chuyên nghiệp dành cho nghệ sĩ. Tự hào là đối tác chiến lược
+              của Grab Fan Tháng 9 Media, chúng tôi mang đến giải pháp sản xuất
+              âm thanh và hình ảnh trọn gói, giúp tác phẩm của bạn đạt chuẩn
+              chất lượng quốc tế.
+            </p>
+            <div
+              class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap"
+            >
+              <a
+                href="#dich-vu"
+                class="btn btn-warning text-dark btn-lg fw-bold rounded-pill px-5 shadow-sm"
+              >
+                Khám phá dịch vụ
+              </a>
+              <a
+                href="https://www.facebook.com/Vclstudios25/"
+                target="_blank"
+                class="btn btn-outline-light btn-lg fw-bold rounded-pill px-5"
+              >
+                <i class="bi bi-facebook me-2"></i>Ghé thăm Fanpage
+              </a>
+            </div>
+          </div>
+
+          <!-- Cột Hình Ảnh (Bên phải) -->
+          <div class="col-lg-5 text-center">
+            <div class="position-relative d-inline-block">
+              <!-- Hiệu ứng viền phát sáng mờ phía sau ảnh -->
+              <div
+                class="position-absolute top-50 start-50 translate-middle bg-warning rounded-circle opacity-25"
+                style="
+                  width: 105%;
+                  height: 105%;
+                  z-index: 0;
+                  filter: blur(20px);
+                "
+              ></div>
+
+              <!-- ẢNH VUÔNG CỦA STUDIO (Thay đổi link ở đây) -->
+              <!-- Thêm thuộc tính aspect-ratio: 1/1 để ép ảnh luôn vuông vức -->
+              <img
+                src="assets/images/vcl-studio.png"
+                alt="VCL Studios"
+                class="img-fluid rounded-4 shadow-lg position-relative z-1 border border-2 border-warning border-opacity-50"
+                style="
+                  max-width: 100%;
+                  width: 400px;
+                  aspect-ratio: 1/1;
+                  object-fit: cover;
+                "
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DỊCH VỤ NỔI BẬT -->
+    <section id="dich-vu" class="py-5 bg-light">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2
+            class="fw-bold display-6 mb-3"
+            style="color: var(--schedio-blue-dark)"
+          >
+            CÁC DỊCH VỤ TẠI VCL STUDIOS
+          </h2>
+          <p class="text-muted fs-5">
+            Những con số biết nói minh chứng cho chất lượng sản xuất
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Service 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 shadow-sm p-4">
+              <div class="icon-wrapper bg-primary bg-opacity-10 text-primary">
+                <i class="bi bi-mic-fill"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Recording / Mix & Master</h4>
+              <p class="text-muted mb-4" style="text-align: justify">
+                Đội ngũ kỹ thuật nhiều kinh nghiệm đứng sau các bài hát
+                <strong class="text-dark">Top 50 Spotify</strong> với hơn
+                <strong class="text-dark">5 triệu lượt stream</strong> trên
+                Tiktok.
+              </p>
+              <ul class="list-unstyled text-muted small mt-auto">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Đã
+                  sản xuất cho:
+                  <strong class="text-dark">gung0cay, Hydra, Zindo</strong>.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Chất
+                  lượng âm thanh chuẩn Streaming.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card service-card h-100 shadow-sm p-4 border-warning"
+              style="border-width: 2px"
+            >
+              <div class="icon-wrapper bg-warning bg-opacity-10 text-warning">
+                <i class="bi bi-music-note-list"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Sản xuất Beat Độc Quyền</h4>
+              <p class="text-muted mb-4" style="text-align: justify">
+                Producer quốc tế và trong nước với
+                <strong class="text-dark">hơn 10 năm kinh nghiệm</strong> có thể
+                chơi đa dạng thể loại, nắm bắt mọi xu hướng âm nhạc hiện đại.
+              </p>
+              <ul class="list-unstyled text-muted small mt-auto">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Đã
+                  hợp tác cùng:
+                  <strong class="text-dark">Sol7, 24K.Right</strong>.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Beat
+                  Custom theo cá tính nghệ sĩ.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card service-card h-100 shadow-sm p-4">
+              <div class="icon-wrapper bg-danger bg-opacity-10 text-danger">
+                <i class="bi bi-camera-video-fill"></i>
+              </div>
+              <h4 class="fw-bold mb-3">Sản xuất Content tại Studio</h4>
+              <p class="text-muted mb-4" style="text-align: justify">
+                Hỗ trợ quay dựng các video biểu diễn, behind the scenes, short
+                videos trực tiếp tại phòng thu với ánh sáng và setup chuyên
+                nghiệp.
+              </p>
+              <ul class="list-unstyled text-muted small mt-auto">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Video
+                  viral đạt:
+                  <strong class="text-danger">826k, 309k views</strong> trên
+                  Reels.
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>Tối
+                  ưu định dạng dọc (TikTok, Reels, Shorts).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="py-5 mb-5">
+      <div class="container">
+        <div class="contact-box shadow-lg position-relative overflow-hidden">
+          <div
+            class="position-absolute top-0 end-0 bg-warning rounded-circle opacity-25"
+            style="width: 300px; height: 300px; transform: translate(30%, -30%)"
+          ></div>
+
+          <div class="row align-items-center position-relative z-1">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <h2 class="fw-bold mb-4 display-6">Kết nối với VCL Studios</h2>
+              <p class="opacity-75 fs-5 mb-0">
+                Biến ý tưởng của bạn thành những bản Hit chất lượng nhất ngay
+                hôm nay.
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="bg-white text-dark p-4 rounded-4 shadow-sm">
+                <div class="d-flex align-items-start mb-4">
+                  <i
+                    class="bi bi-telephone-fill text-primary fs-3 me-3 mt-1"
+                  ></i>
+                  <div>
+                    <h5 class="fw-bold mb-1">Hotline Booking</h5>
+                    <p class="mb-1 text-muted">
+                      <strong>Tiếng Việt:</strong> 0359 887 865 - 0327 308 811
+                    </p>
+                    <p class="mb-0 text-muted">
+                      <strong>English:</strong> 0395 006 821
+                    </p>
+                  </div>
+                </div>
+
+                <hr class="opacity-25 my-3" />
+
+                <div class="d-flex align-items-start mb-4">
+                  <i class="bi bi-geo-alt-fill text-danger fs-3 me-3 mt-1"></i>
+                  <div>
+                    <h5 class="fw-bold mb-1">Địa chỉ Studio</h5>
+                    <p class="mb-0 text-muted">
+                      Số 12A Ngõ 88 Trần Duy Hưng, Cầu Giấy, Hà Nội
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-center mt-4">
+                  <a
+                    href="https://www.facebook.com/Vclstudios25/"
+                    target="_blank"
+                    class="btn btn-primary w-100 fw-bold rounded-pill py-2"
+                  >
+                    <i class="bi bi-messenger me-2"></i>Nhắn tin Fanpage VCL
+                    Studios
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VỊ TRÍ CHÈN FOOTER -->
+    <div id="dynamic-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+  </body>
+</html>
