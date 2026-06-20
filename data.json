@@ -175,6 +175,10 @@
       "img": "https://yt3.googleusercontent.com/NSUU0Ssx7NrdBr-1_iYj_6jGwb_vaJkTqwGC-8hQVoWNWFtrtEDm7hH5WzAvYUXdIjtLWIMjtyQ=s900-c-k-c0x00ffffff-no-rj"
     },
     {
+      "name": "OKX",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw1Q7qLN__RkZ_0qBvie_mFbWrNhg_x6tbEA&s"
+    },
+    {
       "name": "Rocky CDE",
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSj0BHuTdXivbsKXVJI4aGK-i4lRGby0B5YPg&s"
     },
@@ -199,17 +203,13 @@
       "img": "https://yt3.googleusercontent.com/O4aMWIwUsKb7nW04xaj-qM976XzOjXHmtmX4WiKeRmb80pBF4hqX2VjgTR22IBfwoF54maQ2Nw=s160-c-k-c0x00ffffff-no-rj"
     },
     {
-      "name": "OKX",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw1Q7qLN__RkZ_0qBvie_mFbWrNhg_x6tbEA&s"
-    },
-    {
       "name": "DJ Tít",
       "img": "https://images2.thanhnien.vn/528068263637045248/2023/4/5/tpw02223-1680674873517202978009.jpg"
     },
     {
-      "name": "DiamondK",
-      "img": "./assets/images/DiamonK.jpg"
-    }
+      "name": "DJ Tít",
+      "img": "https://yt3.googleusercontent.com/7grlvvWjPXz3TvvsmrXaV0rmqvTqkiAvGKtSkkuidLb7yqdDV0aAlYcoSxoC5_w8E2V_eG7rMQ=s160-c-k-c0x00ffffff-no-rj"
+    },
   ],
   "projects": [
     {
