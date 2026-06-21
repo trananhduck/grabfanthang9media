@@ -56,6 +56,27 @@
         z-index: 0;
       }
 
+      /* CSS cho các thẻ chọn danh mục (MỚI) */
+      .category-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background-color: #ffffff;
+        border: 2px solid transparent;
+      }
+      .category-card:hover {
+        transform: translateY(-8px);
+        background-color: var(--schedio-blue-dark);
+        border-color: var(--schedio-yellow);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+      }
+      .category-card:hover .icon-box i {
+        color: #fff !important;
+      }
+      .category-card:hover h5,
+      .category-card:hover p {
+        color: #fff !important;
+      }
+
       /* CSS cho các thẻ giá (Pricing Cards) */
       .pricing-card {
         transition: all 0.3s ease;
@@ -112,7 +133,7 @@
               đều có các gói dịch vụ tối ưu hiệu quả nhất cho bạn.
             </p>
             <a
-              href="#danh-sach-bang-gia"
+              href="#category-selection"
               class="btn btn-warning text-dark btn-lg fw-bold rounded-pill px-5 shadow-sm"
             >
               XEM BẢNG GIÁ <i class="bi bi-arrow-down ms-2"></i>
@@ -141,6 +162,85 @@
       </div>
     </section>
 
+    <!-- SECTION CHỌN NHÓM KHÁCH HÀNG (MỚI THÊM) -->
+    <section id="category-selection" class="container mt-5 pt-5 pb-3">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold" style="color: var(--schedio-blue-dark)">
+          Bạn thuộc nhóm khách hàng nào?
+        </h2>
+        <p class="text-muted">
+          Lựa chọn nhóm phù hợp để xem bảng giá tối ưu nhất dành cho bạn.
+        </p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Nút Underground -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
+            onclick="selectCategory('pills-undeground-tab')"
+          >
+            <div class="icon-box mb-3">
+              <i class="bi bi-mic-fill display-4 text-warning"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Nghệ sĩ underground</h5>
+            <p class="small text-muted mb-0">
+              Các rapper/artist trẻ muốn quảng bá sản phẩm mới
+            </p>
+          </div>
+        </div>
+
+        <!-- Nút Showbiz -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
+            onclick="selectCategory('pills-showbiz-tab')"
+          >
+            <div class="icon-box mb-3">
+              <i class="bi bi-star-fill display-4 text-warning"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Nghệ sĩ showbiz</h5>
+            <p class="small text-muted mb-0">
+              Nghệ sĩ lớn cần bùng nổ độ phủ sóng mạng xã hội
+            </p>
+          </div>
+        </div>
+
+        <!-- Nút Sự kiện -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
+            onclick="selectCategory('pills-event-tab')"
+          >
+            <div class="icon-box mb-3">
+              <i class="bi bi-calendar-event-fill display-4 text-warning"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Sự kiện</h5>
+            <p class="small text-muted mb-0">
+              Quảng bá sự kiện âm nhạc, tăng nhận diện, bán vé
+            </p>
+          </div>
+        </div>
+
+        <!-- Nút Brands -->
+        <div class="col-md-6 col-lg-3">
+          <div
+            class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
+            onclick="selectCategory('pills-brand-tab')"
+          >
+            <div class="icon-box mb-3">
+              <i class="bi bi-briefcase-fill display-4 text-warning"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Brands</h5>
+            <p class="small text-muted mb-0">
+              Truyền thông sản phẩm, chiến dịch hướng tới gen Z
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION BẢNG GIÁ CHI TIẾT -->
     <section id="danh-sach-bang-gia" class="container my-5 pt-4">
       <ul
         class="nav nav-pills justify-content-center mb-5 gap-2"
@@ -154,7 +254,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-undeground"
           >
-            Nghệ sĩ Underground / Indie
+            Nghệ sĩ nderground
           </button>
         </li>
         <li class="nav-item">
@@ -164,7 +264,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-showbiz"
           >
-            Nghệ sĩ Showbiz
+            Nghệ sĩ showbiz
           </button>
         </li>
         <li class="nav-item">
@@ -174,7 +274,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-event"
           >
-            Sự kiện / Show diễn
+            Sự kiện
           </button>
         </li>
         <li class="nav-item">
@@ -310,6 +410,19 @@
     <script src="footer.js"></script>
 
     <script>
+      // Hàm mới để xử lý click chọn danh mục từ card lớn
+      function selectCategory(tabId) {
+        // Cuộn mượt mà xuống khu vực bảng giá
+        document
+          .getElementById("danh-sach-bang-gia")
+          .scrollIntoView({ behavior: "smooth" });
+
+        // Kích hoạt tab Bootstrap tương ứng
+        var triggerEl = document.querySelector("#" + tabId);
+        var tab = new bootstrap.Tab(triggerEl);
+        tab.show();
+      }
+
       function updateDemo(title, desc) {
         var ugModalEl = document.getElementById("ugPricingModal");
         var ugModal = bootstrap.Modal.getInstance(ugModalEl);
