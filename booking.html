@@ -499,7 +499,7 @@
                   </div>
                   <div class="mt-auto">
                       <div class="text-muted small mb-3 fw-medium">Đa dạng gói Booking (1A - 5)</div>
-                      <button class="btn btn-outline-dark fw-bold rounded-pill w-100 shadow-sm" onclick="openUgModal(event, '${item.key}', '${item.channel}')">XEM BẢNG GIÁ</button>
+                      <button class="btn btn-outline-dark fw-bold rounded-pill px-5 shadow-sm" onclick="openUgModal(event, '${item.key}', '${item.channel}')">XEM BẢNG GIÁ</button>
                   </div>
                 </div>
               </div>`;
@@ -572,7 +572,7 @@
                   <div class="mt-auto">
                       <div class="price-text fw-bold mb-0">${item.price}</div>
                       <div class="text-muted small mb-4 fw-medium">${item.unit}</div>
-                      <a href="https://zalo.me/0344377104" target="_blank" onclick="event.stopPropagation()" class="btn btn-dark fw-bold rounded-pill w-100 shadow-sm">BOOKING NGAY</a>
+                      <a href="https://zalo.me/0344377104" target="_blank" onclick="event.stopPropagation()" class="btn btn-dark fw-bold rounded-pill px-5 shadow-sm">BOOKING NGAY</a>
                   </div>
                 </div>
               </div>`;
@@ -580,7 +580,6 @@
             html += "</div>";
             container.innerHTML = html;
           }
-
           // Render các nhóm
           renderPricingCards(
             "showbiz-cards-container",
