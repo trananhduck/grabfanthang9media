@@ -42,6 +42,32 @@
         border: 2px dashed var(--schedio-yellow);
         border-radius: 16px;
       }
+
+      /* CSS cho tính năng chuyển trang (Pagination) */
+      .blog-item {
+        display: none; /* Ẩn mặc định, JS sẽ điều khiển hiển thị */
+        animation: fadeIn 0.5s; /* Hiệu ứng mờ dần khi chuyển trang */
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .page-item.active .page-link {
+        background-color: var(--schedio-blue-dark);
+        border-color: var(--schedio-blue-dark);
+        color: #fff;
+      }
+      .page-link {
+        color: var(--schedio-blue-dark);
+        cursor: pointer;
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
@@ -57,7 +83,8 @@
       </div>
     </section>
 
-    <section class="container my-5">
+    <!-- Thêm ID blog-section để cuộn trang tới đúng vị trí này -->
+    <section class="container my-5" id="blog-section">
       <!-- KHU VỰC DONATE / ỦNG HỘ TÁC GIẢ -->
       <div
         class="card border-0 rounded-4 p-4 text-center mb-5 shadow-sm"
@@ -76,13 +103,11 @@
             nội dung chất lượng!
           </p>
 
-          <!-- KHỐI THÔNG TIN GỘP CHUNG CHUYÊN NGHIỆP -->
           <div
             class="bg-white rounded-4 shadow-sm p-4 mx-auto border"
             style="max-width: 650px"
           >
             <div class="row align-items-center justify-content-center g-4">
-              <!-- Cột QR Code -->
               <div class="col-sm-5 col-md-5 text-center">
                 <img
                   src="assets/images/qr-donate.jpg"
@@ -95,7 +120,6 @@
                 </div>
               </div>
 
-              <!-- Cột Thông tin -->
               <div
                 class="col-sm-7 col-md-7 text-start"
                 style="border-left: 1px solid #f1f3f5"
@@ -124,7 +148,6 @@
                     >
                     <div class="d-flex align-items-center gap-2 flex-wrap">
                       <strong class="text-primary fs-4 mb-0">1040314067</strong>
-                      <!-- Nút Copy gọi hàm JS -->
                       <button
                         class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold"
                         onclick="copySTK(this)"
@@ -148,8 +171,11 @@
       </div>
       <!-- KẾT THÚC KHU VỰC DONATE -->
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
+      <!-- Thêm ID blog-container vào để JS xử lý -->
+      <div class="row g-4" id="blog-container">
+        <!-- BÀI VIẾT 1 -->
+        <!-- Đã thêm class "blog-item" vào tất cả các cột chứa bài viết -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -186,7 +212,8 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <!-- BÀI VIẾT 2 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -223,7 +250,8 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <!-- BÀI VIẾT 3 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -260,7 +288,8 @@
           </div>
         </div>
 
-        <div class="col-md-6 col-lg-4">
+        <!-- BÀI VIẾT 4 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -298,7 +327,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 5 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -334,7 +365,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 6 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -370,7 +403,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 7 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -406,7 +441,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 8 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -444,7 +481,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 9 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -480,7 +519,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 10 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -516,7 +557,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 11 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -552,7 +595,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 12 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -588,7 +633,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 13 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -626,7 +673,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 14 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -638,7 +687,6 @@
               <div
                 class="d-flex justify-content-between align-items-center mb-2"
               >
-                <!-- Badge màu đỏ cho nổi bật chủ đề Góc Nhìn / Chiến tranh -->
                 <span class="badge bg-danger">Góc nhìn khán giả</span>
                 <small class="text-muted"
                   ><i class="bi bi-calendar3 me-1"></i> 28/05/2026</small
@@ -663,7 +711,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+
+        <!-- BÀI VIẾT 15 -->
+        <div class="col-md-6 col-lg-4 blog-item">
           <div class="blog-card h-100 d-flex flex-column shadow-sm">
             <div class="blog-img-wrapper">
               <img
@@ -675,7 +725,6 @@
               <div
                 class="d-flex justify-content-between align-items-center mb-2"
               >
-                <!-- Badge màu vàng phù hợp với chủ đề Câu Chuyện Âm Nhạc -->
                 <span class="badge bg-warning text-dark"
                   >Câu Chuyện Âm Nhạc</span
                 >
@@ -704,6 +753,13 @@
           </div>
         </div>
       </div>
+
+      <!-- KHOẢNG CHỨA CÁC NÚT ĐIỀU HƯỚNG TRANG (PAGINATION) -->
+      <nav aria-label="Page navigation" class="mt-5 pt-3">
+        <ul class="pagination justify-content-center" id="pagination-controls">
+          <!-- JS sẽ tự động tạo nút ở đây -->
+        </ul>
+      </nav>
     </section>
 
     <section class="container my-5 pt-4">
@@ -796,6 +852,72 @@
             console.error("Không thể copy", err);
           });
       }
+    </script>
+
+    <!-- SCRIPT XỬ LÝ CHIA TRANG (PAGINATION) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const itemsPerPage = 9; // Cấu hình số bài hiển thị mỗi trang
+        const blogItems = document.querySelectorAll(".blog-item"); // Lấy tất cả bài viết
+        const totalPages = Math.ceil(blogItems.length / itemsPerPage);
+        let currentPage = 1;
+
+        const paginationContainer = document.getElementById(
+          "pagination-controls",
+        );
+
+        function renderPagination() {
+          paginationContainer.innerHTML = "";
+
+          // Tạo nút "Trước"
+          const prevLi = document.createElement("li");
+          prevLi.className = `page-item ${currentPage === 1 ? "disabled" : ""}`;
+          prevLi.innerHTML = `<a class="page-link shadow-sm px-3 rounded-start-pill" href="#blog-section" onclick="changePage(${currentPage - 1})">Trước</a>`;
+          paginationContainer.appendChild(prevLi);
+
+          // Tạo các số trang (1, 2, 3...)
+          for (let i = 1; i <= totalPages; i++) {
+            const pageLi = document.createElement("li");
+            pageLi.className = `page-item ${currentPage === i ? "active" : ""}`;
+            pageLi.innerHTML = `<a class="page-link shadow-sm px-3" href="#blog-section" onclick="changePage(${i})">${i}</a>`;
+            paginationContainer.appendChild(pageLi);
+          }
+
+          // Tạo nút "Sau"
+          const nextLi = document.createElement("li");
+          nextLi.className = `page-item ${currentPage === totalPages ? "disabled" : ""}`;
+          nextLi.innerHTML = `<a class="page-link shadow-sm px-3 rounded-end-pill" href="#blog-section" onclick="changePage(${currentPage + 1})">Sau</a>`;
+          paginationContainer.appendChild(nextLi);
+        }
+
+        function showPage(page) {
+          if (page < 1 || page > totalPages) return; // Tránh lỗi khi bấm quá giới hạn
+          currentPage = page;
+
+          // Tính toán vị trí bài bắt đầu và kết thúc trên trang hiện tại
+          const start = (currentPage - 1) * itemsPerPage;
+          const end = start + itemsPerPage;
+
+          // Chạy vòng lặp ẩn/hiện bài viết tương ứng
+          blogItems.forEach((item, index) => {
+            if (index >= start && index < end) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+
+          renderPagination();
+        }
+
+        // Tạo hàm toàn cục để thẻ <a> bên HTML có thể gọi được
+        window.changePage = function (page) {
+          showPage(page);
+        };
+
+        // Kích hoạt mặc định ngay khi vừa load web
+        showPage(1);
+      });
     </script>
   </body>
 </html>
