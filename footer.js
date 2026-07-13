@@ -16,12 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="p-3 bg-white rounded-3 shadow-sm d-inline-block">
               <ul class="list-unstyled mb-0 text-start">
                 <li class="mb-2">
-                  <a href="https://zalo.me/0344377104" target="_blank" class="text-decoration-none text-dark d-flex align-items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" width="20" height="20" class="me-2" alt="Zalo" />
-                    <span class="fw-bold">0344 377 104</span>
-                  </a>
-                </li>
-                <li class="mb-2">
                   <i class="bi bi-facebook text-primary me-2"></i>
                   <a href="https://www.facebook.com/grabfanthang9" target="_blank" class="text-decoration-none text-dark fw-bold">Grab Fan Tháng 9</a>
                 </li>
