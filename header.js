@@ -60,9 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link fw-bold text-nowrap ${currentPath === "vcl-studio.html" ? "active" : ""}" href="${prefix}vcl-studio.html">VCL Studios</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link fw-bold text-nowrap ${currentPath === "blog.html" || window.location.pathname.includes('/blog/') ? "active" : ""}" href="${prefix}blog.html">Bài viết</a>
             </li>
             <li class="nav-item">
