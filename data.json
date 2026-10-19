@@ -8,7 +8,7 @@
     },
     "thamthinh": {
       "name": "Fanpage Rap Fan Thám Thính",
-      "sub": "43K",
+      "sub": "42K",
       "link": "https://www.facebook.com/rapfanthamthinh",
       "img": "assets/images/rftt.jpg"
     },
@@ -91,7 +91,7 @@
       }
     ],
     "showbiz": [
-      { "key": "grabfan", "price": "400k", "unit": "/ Post" },
+      { "key": "grabfan", "price": "500k", "unit": "/ Post" },
       { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
       { "key": "group", "price": "200k", "unit": "/ Post" },
       { "key": "nnr", "price": "100k", "unit": "/ Post" },
