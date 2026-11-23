@@ -94,6 +94,26 @@
         font-size: 1.8rem;
       }
 
+      /* Badge Combo tinh tế, không làm lệch chiều cao card */
+      .combo-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: #fff8e1;
+        border: 1px solid #ffe082;
+        color: #212529;
+        font-size: 0.78rem;
+        padding: 4px 12px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+      .combo-pill:hover {
+        background-color: #ffc107;
+        border-color: #ffc107;
+        color: #000;
+      }
+
       .ug-table td {
         vertical-align: middle;
       }
@@ -352,7 +372,7 @@
               <table class="table table-hover mb-0 ug-table">
                 <thead class="table-light text-center">
                   <tr>
-                    <th class="py-3" style="width: 20%">Gói</th>
+                    <th class="py-3" style="width: 22%">Gói</th>
                     <th class="py-3 text-start">Chi tiết dịch vụ</th>
                     <th class="py-3" style="width: 25%">Đơn giá</th>
                   </tr>
@@ -436,7 +456,7 @@
         .then((response) => response.json())
         .then((data) => {
           // -------------------------------------------------------------
-          // 1. RENDER THẺ KÊNH CHO UNDERGROUND / INDIE
+          // 1. RENDER THẺ KÊNH CHO UNDERGROUND / INDIE (ĐÃ THÊM HH4L)
           // -------------------------------------------------------------
           const ugContainer = document.getElementById("ug-cards-container");
           let ugHtml = "";
@@ -446,13 +466,23 @@
               key: "p1",
               channel: data.channels.grabfan.name,
               sub: data.channels.grabfan.sub + " Followers",
+              note: "Đa dạng gói Booking (1A - 5)",
               img: data.channels.grabfan.img,
               link: data.channels.grabfan.link,
+            },
+            {
+              key: "hh4l",
+              channel: data.channels.hh4l.name,
+              sub: data.channels.hh4l.sub + " Followers",
+              note: "Gói lẻ FB & Combo TikTok",
+              img: data.channels.hh4l.img,
+              link: data.channels.hh4l.link,
             },
             {
               key: "p2",
               channel: data.channels.thamthinh.name,
               sub: data.channels.thamthinh.sub + " Followers",
+              note: "Đa dạng gói Booking (1A - 5)",
               img: data.channels.thamthinh.img,
               link: data.channels.thamthinh.link,
             },
@@ -460,6 +490,7 @@
               key: "p4",
               channel: data.channels.group.name,
               sub: data.channels.group.sub + " Thành viên",
+              note: "Đa dạng gói Booking (1A - 5)",
               img: data.channels.group.img,
               link: data.channels.group.link,
             },
@@ -467,6 +498,7 @@
               key: "p3",
               channel: data.channels.nnr.name,
               sub: data.channels.nnr.sub + " Followers",
+              note: "Đa dạng gói Booking (1A - 5)",
               img: data.channels.nnr.img,
               link: data.channels.nnr.link,
             },
@@ -474,6 +506,7 @@
               key: "tiktok",
               channel: data.channels.tiktok.name,
               sub: data.channels.tiktok.sub + " Followers",
+              note: "Đăng video TikTok",
               img: data.channels.tiktok.img,
               link: data.channels.tiktok.link,
             },
@@ -481,6 +514,7 @@
 
           window.undergroundData = data.pricing.underground;
           window.tiktokPriceUg = data.pricing.tiktok_price_ug;
+          window.hh4lData = data.channels.hh4l;
 
           ugChannelsInfo.forEach((item) => {
             ugHtml += `
@@ -494,7 +528,7 @@
                     </span>
                   </div>
                   <div class="mt-auto">
-                      <div class="text-muted small mb-3 fw-medium">Đa dạng gói Booking (1A - 5)</div>
+                      <div class="text-muted small mb-3 fw-medium">${item.note}</div>
                       <button class="btn btn-outline-dark fw-bold rounded-pill px-5 shadow-sm" onclick="openUgModal(event, '${item.key}', '${item.channel}')">XEM BẢNG GIÁ</button>
                   </div>
                 </div>
@@ -519,6 +553,27 @@
                       </td>
                       <td class="text-center fw-bold text-danger fs-5">${window.tiktokPriceUg}</td>
                   </tr>`;
+            } else if (key === "hh4l") {
+              html = `
+                  <tr>
+                      <td class="text-center fw-bold bg-light">Gói Lẻ FB</td>
+                      <td class="small">
+                        - Đăng 1 bài viết trên Fanpage <a href="${window.hh4lData.link}" target="_blank" class="fw-bold text-decoration-none">Hiphop4life</a><br>
+                        - Gắn link sản phẩm ở bình luận
+                      </td>
+                      <td class="text-center fw-bold text-danger fs-5">500k / Post</td>
+                  </tr>
+                  <tr>
+                      <td class="text-center fw-bold bg-light">
+                        Combo<br>
+                        <span class="badge bg-warning text-dark mt-1">Tiết kiệm</span>
+                      </td>
+                      <td class="small">
+                        - 1 bài viết trên Fanpage <a href="${window.hh4lData.link}" target="_blank" class="fw-bold text-decoration-none">Hiphop4life</a><br>
+                        - 1 video đăng tải trên kênh TikTok <a href="${window.hh4lData.tiktok_link}" target="_blank" class="fw-bold text-decoration-none">@hh4lf</a>
+                      </td>
+                      <td class="text-center fw-bold text-danger fs-5">800k / Combo</td>
+                  </tr>`;
             } else {
               window.undergroundData.forEach((row) => {
                 html += `
@@ -541,7 +596,7 @@
           };
 
           // -------------------------------------------------------------
-          // 2. RENDER THẺ KÊNH CHO SHOWBIZ, EVENT, BRAND (CÓ HIPHOP4LIFE)
+          // 2. RENDER THẺ KÊNH CHO SHOWBIZ, EVENT, BRAND (CÂN ĐỐI ĐỀU NHAU)
           // -------------------------------------------------------------
           function renderPricingCards(containerId, pricingData, channelsData) {
             const container = document.getElementById(containerId);
@@ -552,17 +607,16 @@
               let suffixText =
                 item.key === "group" ? " Thành viên" : " Followers";
 
-              // Xử lý hiển thị riêng cho thẻ Hiphop4life (có thêm gói Combo TikTok)
-              let extraInfoHtml = "";
+              // Dải thông tin phụ (Combo cho HH4L hoặc khoảng trống giữ nhịp đều cho các thẻ khác)
+              let subUnitHtml = `<div class="text-muted small mb-4 fw-medium">${item.unit}</div>`;
+
               if (item.combo_price && channelInfo.tiktok_link) {
-                extraInfoHtml = `
-                  <div class="bg-warning bg-opacity-10 border border-warning rounded-3 p-2 mb-3 mx-auto" style="max-width: 260px;">
-                    <div class="fw-bold text-dark" style="font-size: 0.85rem;">
-                      <i class="bi bi-stars text-warning me-1"></i>Combo: <span class="text-danger">${item.combo_price}</span>
-                    </div>
-                    <div class="text-muted" style="font-size: 0.75rem;">1 Post FB + 1 Video TikTok</div>
-                    <a href="${channelInfo.tiktok_link}" target="_blank" onclick="event.stopPropagation()" class="badge bg-dark text-white text-decoration-none mt-1">
-                      <i class="bi bi-tiktok me-1"></i>Xem kênh TikTok @hh4lf
+                subUnitHtml = `
+                  <div class="text-muted small mb-2 fw-medium">${item.unit}</div>
+                  <div class="mb-3">
+                    <a href="${channelInfo.tiktok_link}" target="_blank" onclick="event.stopPropagation()" class="combo-pill shadow-sm" title="Xem kênh TikTok @hh4lf">
+                      <i class="bi bi-tiktok"></i>
+                      <span>Combo +1 Video TikTok: <strong class="text-danger">${item.combo_price}</strong></span>
                     </a>
                   </div>
                 `;
@@ -570,18 +624,20 @@
 
               html += `
               <div class="col-12 col-sm-6 col-lg-4">
-                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card" onclick="window.open('${channelInfo.link}', '_blank')">
-                  <img src="${channelInfo.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${channelInfo.name}">
-                  <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${channelInfo.name}</h6>
-                  <div class="mb-3">
-                    <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 0.8rem;">
-                      <i class="bi bi-people-fill me-1"></i>${channelInfo.sub}${suffixText}
-                    </span>
+                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card d-flex flex-column" onclick="window.open('${channelInfo.link}', '_blank')">
+                  <div>
+                    <img src="${channelInfo.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${channelInfo.name}">
+                    <h6 class="fw-bold mb-2 text-dark" style="font-size: 1rem; min-height: 24px;">${channelInfo.name}</h6>
+                    <div class="mb-4">
+                      <span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 0.8rem;">
+                        <i class="bi bi-people-fill me-1"></i>${channelInfo.sub}${suffixText}
+                      </span>
+                    </div>
                   </div>
+                  
                   <div class="mt-auto">
                       <div class="price-text fw-bold mb-0">${item.price}</div>
-                      <div class="text-muted small mb-3 fw-medium">${item.unit}</div>
-                      ${extraInfoHtml}
+                      ${subUnitHtml}
                       <a href="https://zalo.me/0344377104" target="_blank" onclick="event.stopPropagation()" class="btn btn-dark fw-bold rounded-pill px-5 shadow-sm">BOOKING NGAY</a>
                   </div>
                 </div>
