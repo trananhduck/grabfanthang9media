@@ -30,22 +30,11 @@
       "link": "https://www.tiktok.com/@grabfanthang9",
       "img": "assets/images/gft9.jpg"
     },
-    "hh4l_fb": {
+    "hh4l": {
       "name": "Fanpage Hiphop4life",
-      "sub": "Fanpage",
+      "sub": "Hiphop4life",
       "link": "https://www.facebook.com/HH4LF",
-      "img": "assets/images/gft9.jpg"
-    },
-    "hh4l_tiktok": {
-      "name": "TikTok Hiphop4life",
-      "sub": "TikTok",
-      "link": "https://www.tiktok.com/@hh4lf",
-      "img": "assets/images/gft9.jpg"
-    },
-    "hh4l_combo": {
-      "name": "Combo Hiphop4life (FB + TikTok)",
-      "sub": "Đa nền tảng",
-      "link": "https://www.facebook.com/HH4LF",
+      "tiktok_link": "https://www.tiktok.com/@hh4lf",
       "img": "assets/images/gft9.jpg"
     }
   },
@@ -110,6 +99,7 @@
     ],
     "showbiz": [
       { "key": "grabfan", "price": "500k", "unit": "/ Post" },
+      { "key": "hh4l", "price": "500k", "unit": "/ Post", "combo_price": "800k" },
       { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
       { "key": "group", "price": "200k", "unit": "/ Post" },
       { "key": "nnr", "price": "100k", "unit": "/ Post" },
@@ -117,6 +107,7 @@
     ],
     "event": [
       { "key": "grabfan", "price": "400k", "unit": "/ Post" },
+      { "key": "hh4l", "price": "500k", "unit": "/ Post", "combo_price": "800k" },
       { "key": "thamthinh", "price": "200k", "unit": "/ Post" },
       { "key": "group", "price": "200k", "unit": "/ Post" },
       { "key": "nnr", "price": "100k", "unit": "/ Post" },
@@ -124,26 +115,11 @@
     ],
     "brand": [
       { "key": "grabfan", "price": "1000k", "unit": "/ Post" },
+      { "key": "hh4l", "price": "500k", "unit": "/ Post", "combo_price": "800k" },
       { "key": "thamthinh", "price": "300k", "unit": "/ Post" },
       { "key": "group", "price": "250k", "unit": "/ Post" },
       { "key": "nnr", "price": "100k", "unit": "/ Post" },
       { "key": "tiktok", "price": "200k", "unit": "/ Video" }
-    ],
-    "hiphop4life": [
-      {
-        "key": "hh4l_fb",
-        "title": "Fanpage Hiphop4life",
-        "desc": "Đăng 1 bài viết truyền thông sản phẩm/sự kiện trực tiếp trên Fanpage Hiphop4life.",
-        "price": "500k",
-        "unit": "/ Post"
-      },
-      {
-        "key": "hh4l_combo",
-        "title": "Combo Hiphop4life (FB + TikTok)",
-        "desc": "Trọn gói 1 bài đăng trên Fanpage Hiphop4life + 1 video đăng tải trên kênh TikTok @hh4lf.",
-        "price": "800k",
-        "unit": "/ Combo (1 Post + 1 Video)"
-      }
     ],
     "tiktok_price_ug": "100K / Video"
   },
