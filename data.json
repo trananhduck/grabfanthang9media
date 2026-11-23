@@ -115,7 +115,7 @@
     ],
     "brand": [
       { "key": "grabfan", "price": "1000k", "unit": "/ Post" },
-      { "key": "hh4l", "price": "500k", "unit": "/ Post", "combo_price": "800k" },
+      { "key": "hh4l", "price": "1000k", "unit": "/ Post", "combo_price": "1500k" },
       { "key": "thamthinh", "price": "300k", "unit": "/ Post" },
       { "key": "group", "price": "250k", "unit": "/ Post" },
       { "key": "nnr", "price": "100k", "unit": "/ Post" },
