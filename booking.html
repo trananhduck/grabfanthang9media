@@ -56,7 +56,7 @@
         z-index: 0;
       }
 
-      /* CSS cho các thẻ chọn danh mục (MỚI) */
+      /* CSS cho các thẻ chọn danh mục */
       .category-card {
         cursor: pointer;
         transition: all 0.3s ease;
@@ -162,7 +162,7 @@
       </div>
     </section>
 
-    <!-- SECTION CHỌN NHÓM KHÁCH HÀNG (MỚI THÊM) -->
+    <!-- SECTION CHỌN NHÓM KHÁCH HÀNG -->
     <section id="category-selection" class="container mt-5 pt-5 pb-3">
       <div class="text-center mb-5">
         <h2 class="fw-bold" style="color: var(--schedio-blue-dark)">
@@ -175,7 +175,7 @@
 
       <div class="row g-4 justify-content-center">
         <!-- Nút Underground -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div
             class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
             onclick="selectCategory('pills-undeground-tab')"
@@ -191,7 +191,7 @@
         </div>
 
         <!-- Nút Showbiz -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div
             class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
             onclick="selectCategory('pills-showbiz-tab')"
@@ -207,7 +207,7 @@
         </div>
 
         <!-- Nút Sự kiện -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div
             class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
             onclick="selectCategory('pills-event-tab')"
@@ -223,7 +223,7 @@
         </div>
 
         <!-- Nút Brands -->
-        <div class="col-md-6 col-lg-3">
+        <div class="col-md-6 col-lg-4">
           <div
             class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
             onclick="selectCategory('pills-brand-tab')"
@@ -234,6 +234,22 @@
             <h5 class="fw-bold text-dark mb-2">Brands</h5>
             <p class="small text-muted mb-0">
               Truyền thông sản phẩm, chiến dịch hướng tới gen Z
+            </p>
+          </div>
+        </div>
+
+        <!-- Nút Hiphop4life (MỚI THÊM) -->
+        <div class="col-md-6 col-lg-4">
+          <div
+            class="card h-100 shadow-sm rounded-4 category-card text-center p-4"
+            onclick="selectCategory('pills-hh4l-tab')"
+          >
+            <div class="icon-box mb-3">
+              <i class="bi bi-boombox-fill display-4 text-warning"></i>
+            </div>
+            <h5 class="fw-bold text-dark mb-2">Hiphop4life</h5>
+            <p class="small text-muted mb-0">
+              Gói truyền thông độc quyền & combo trên hệ thống Hiphop4life
             </p>
           </div>
         </div>
@@ -254,7 +270,7 @@
             data-bs-toggle="pill"
             data-bs-target="#pills-undeground"
           >
-            Nghệ sĩ nderground
+            Nghệ sĩ Underground
           </button>
         </li>
         <li class="nav-item">
@@ -285,6 +301,16 @@
             data-bs-target="#pills-brand"
           >
             Brands
+          </button>
+        </li>
+        <li class="nav-item">
+          <button
+            class="nav-link fw-bold px-4 rounded-pill"
+            id="pills-hh4l-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-hh4l"
+          >
+            Hiphop4life
           </button>
         </li>
       </ul>
@@ -322,6 +348,16 @@
           <p class="text-danger small fst-italic mt-4 text-center">
             <i class="bi bi-exclamation-circle-fill me-1"></i> Lưu ý: Các yêu
             cầu đặc biệt của nhãn hàng vui lòng trao đổi qua Zalo.
+          </p>
+        </div>
+
+        <!-- TAB CONTENT HIPHOP4LIFE (MỚI THÊM) -->
+        <div class="tab-pane fade" id="pills-hh4l">
+          <div id="hh4l-cards-container"></div>
+          <p class="text-danger small fst-italic mt-4 text-center">
+            <i class="bi bi-exclamation-circle-fill me-1"></i> Lưu ý: Giá áp
+            dụng cho Fanpage và kênh TikTok Hiphop4life. Link sản phẩm được đăng
+            kèm trong phần bình luận.
           </p>
         </div>
       </div>
@@ -410,14 +446,12 @@
     <script src="footer.js"></script>
 
     <script>
-      // Hàm mới để xử lý click chọn danh mục từ card lớn
+      // Hàm xử lý click chọn danh mục từ card lớn
       function selectCategory(tabId) {
-        // Cuộn mượt mà xuống khu vực bảng giá
         document
           .getElementById("danh-sach-bang-gia")
           .scrollIntoView({ behavior: "smooth" });
 
-        // Kích hoạt tab Bootstrap tương ứng
         var triggerEl = document.querySelector("#" + tabId);
         var tab = new bootstrap.Tab(triggerEl);
         tab.show();
@@ -444,7 +478,6 @@
           const ugContainer = document.getElementById("ug-cards-container");
           let ugHtml = "";
 
-          // Trích xuất tự động thông tin kênh từ file JSON
           const ugChannelsInfo = [
             {
               key: "p1",
@@ -507,7 +540,7 @@
           ugContainer.innerHTML = ugHtml;
 
           window.openUgModal = function (e, key, channelName) {
-            e.stopPropagation(); // Ngăn chặn nhảy link khi bấm nút Xem Bảng Giá
+            e.stopPropagation();
             document.getElementById("ugModalTitle").innerText =
               "Bảng giá " + channelName;
             let tbody = document.getElementById("ugModalBody");
@@ -552,10 +585,7 @@
             let html = '<div class="row justify-content-center g-4">';
 
             pricingData.forEach((item) => {
-              // Lấy thông tin kênh từ key trong phần channels
               let channelInfo = channelsData[item.key];
-
-              // Xử lý text phụ (sub) cho chuẩn
               let suffixText =
                 item.key === "group" ? " Thành viên" : " Followers";
 
@@ -580,6 +610,55 @@
             html += "</div>";
             container.innerHTML = html;
           }
+
+          // -------------------------------------------------------------
+          // 3. RENDER THẺ KÊNH CHO HIPHOP4LIFE (MỚI THÊM)
+          // -------------------------------------------------------------
+          function renderHiphop4lifeCards(containerId, hh4lData, channelsData) {
+            const container = document.getElementById(containerId);
+            if (!container || !hh4lData) return;
+            let html = '<div class="row justify-content-center g-4">';
+
+            hh4lData.forEach((item) => {
+              let channelInfo = channelsData[item.key];
+              let isCombo = item.key === "hh4l_combo";
+              let badgeHTML = isCombo
+                ? `<span class="badge bg-warning text-dark rounded-pill px-3 py-1 fw-bold" style="font-size: 0.8rem;">
+                     <i class="bi bi-fire me-1"></i>Gói Combo Tiết Kiệm
+                   </span>`
+                : `<span class="badge bg-primary bg-opacity-10 text-primary rounded-pill px-2 py-1" style="font-size: 0.8rem;">
+                     <i class="bi bi-people-fill me-1"></i>${channelInfo.sub} Followers
+                   </span>`;
+
+              let linksHTML = isCombo
+                ? `<div class="d-flex justify-content-center gap-2 mb-3">
+                     <a href="${channelsData.hh4l_fb.link}" target="_blank" onclick="event.stopPropagation()" class="badge bg-light text-primary border text-decoration-none"><i class="bi bi-facebook me-1"></i>Facebook</a>
+                     <a href="${channelsData.hh4l_tiktok.link}" target="_blank" onclick="event.stopPropagation()" class="badge bg-light text-dark border text-decoration-none"><i class="bi bi-tiktok me-1"></i>TikTok</a>
+                   </div>`
+                : `<div class="mb-3">
+                     <a href="${channelInfo.link}" target="_blank" onclick="event.stopPropagation()" class="badge bg-light text-primary border text-decoration-none"><i class="bi bi-facebook me-1"></i>Xem Fanpage</a>
+                   </div>`;
+
+              html += `
+              <div class="col-12 col-sm-6 col-lg-5">
+                <div class="card h-100 shadow-sm rounded-4 text-center p-4 pricing-card ${isCombo ? "border-warning" : ""}" onclick="window.open('${channelInfo.link}', '_blank')">
+                  <img src="${channelInfo.img}" class="rounded-circle mx-auto mb-3 shadow-sm border border-2 border-warning" width="80" height="80" style="object-fit: cover;" alt="${item.title}">
+                  <h5 class="fw-bold mb-2 text-dark">${item.title}</h5>
+                  <div class="mb-2">${badgeHTML}</div>
+                  ${linksHTML}
+                  <p class="text-muted small px-2 mb-4">${item.desc}</p>
+                  <div class="mt-auto">
+                      <div class="price-text fw-bold mb-0">${item.price}</div>
+                      <div class="text-muted small mb-4 fw-medium">${item.unit}</div>
+                      <a href="https://zalo.me/0344377104" target="_blank" onclick="event.stopPropagation()" class="btn ${isCombo ? "btn-warning text-dark" : "btn-dark"} fw-bold rounded-pill px-5 shadow-sm">BOOKING NGAY</a>
+                  </div>
+                </div>
+              </div>`;
+            });
+            html += "</div>";
+            container.innerHTML = html;
+          }
+
           // Render các nhóm
           renderPricingCards(
             "showbiz-cards-container",
@@ -594,6 +673,11 @@
           renderPricingCards(
             "brand-cards-container",
             data.pricing.brand,
+            data.channels,
+          );
+          renderHiphop4lifeCards(
+            "hh4l-cards-container",
+            data.pricing.hiphop4life,
             data.channels,
           );
         })

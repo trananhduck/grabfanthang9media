@@ -29,6 +29,24 @@
       "sub": "7K",
       "link": "https://www.tiktok.com/@grabfanthang9",
       "img": "assets/images/gft9.jpg"
+    },
+    "hh4l_fb": {
+      "name": "Fanpage Hiphop4life",
+      "sub": "Fanpage",
+      "link": "https://www.facebook.com/HH4LF",
+      "img": "assets/images/gft9.jpg"
+    },
+    "hh4l_tiktok": {
+      "name": "TikTok Hiphop4life",
+      "sub": "TikTok",
+      "link": "https://www.tiktok.com/@hh4lf",
+      "img": "assets/images/gft9.jpg"
+    },
+    "hh4l_combo": {
+      "name": "Combo Hiphop4life (FB + TikTok)",
+      "sub": "Đa nền tảng",
+      "link": "https://www.facebook.com/HH4LF",
+      "img": "assets/images/gft9.jpg"
     }
   },
   "pricing": {
@@ -111,6 +129,22 @@
       { "key": "nnr", "price": "100k", "unit": "/ Post" },
       { "key": "tiktok", "price": "200k", "unit": "/ Video" }
     ],
+    "hiphop4life": [
+      {
+        "key": "hh4l_fb",
+        "title": "Fanpage Hiphop4life",
+        "desc": "Đăng 1 bài viết truyền thông sản phẩm/sự kiện trực tiếp trên Fanpage Hiphop4life.",
+        "price": "500k",
+        "unit": "/ Post"
+      },
+      {
+        "key": "hh4l_combo",
+        "title": "Combo Hiphop4life (FB + TikTok)",
+        "desc": "Trọn gói 1 bài đăng trên Fanpage Hiphop4life + 1 video đăng tải trên kênh TikTok @hh4lf.",
+        "price": "800k",
+        "unit": "/ Combo (1 Post + 1 Video)"
+      }
+    ],
     "tiktok_price_ug": "100K / Video"
   },
   "clients": [
@@ -144,7 +178,7 @@
     },
     {
       "name": "Freaky",
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOo7ebJvOviDyiCUgIg1YPH_wABvdBhdf4Q&s"
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOo7ebJvOviCUgIg1YPH_wABvdBhdf4Q&s"
     },
     {
       "name": "Bạn Có Tài Mà",
